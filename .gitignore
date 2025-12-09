@@ -1,0 +1,15 @@
+# MATLAB / Simulink temporary files
+*.asv
+*.slxc
+*.slx.autosave
+*.mdl.autosave
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
