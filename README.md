@@ -32,7 +32,7 @@ Developing system-level, control-oriented and switching models, together with a 
 Designing control algorithms, including FOC/SVPWM implementation logic, bandwidth selection, PI tuning, delay compensation, limiting strategies, nonlinear-region handling, and commissioning considerations.
 
 ### • Testing and debugging methodology
-Conducting testing and debugging workflow, including measurement considerations, limiter and anti-windup behaviour, EMI-related effects, step test, and practical debugging strategies.
+Conducting testing and debugging workflow, including measurement considerations, limiter and anti-windup behaviour, EMI-related effects, step-response testing, and practical debugging strategies.
 
 ### • Engineering documentation
 Producing clear, traceable engineering documentation aligned with industry practices, including system notes, modelling assumptions, design justifications, and debugging insights.
@@ -134,10 +134,9 @@ This plan may evolve as refinements or additional demonstrations are added, whil
 
 # 5. Project Status
 
-* Phase 1 — System Design & Scaffolding: in progress  
-* Phase 2 — Power Stage Design: scheduled  
-* Phase 3 — Modelling & Simulation: scheduled  
-* Phase 4 — Control, Debugging & Release v1.0: scheduled  
+Current phase: **Phase 1 — System Design & Scaffolding**
+
+This phase focuses on establishing the system-level definition, architecture, and documentation framework.
 
 Updates will be added throughout the development process as models, diagrams and documentation mature.
 
