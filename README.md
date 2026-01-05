@@ -4,7 +4,13 @@ This repository presents a structured engineering workflow for a 15 kW high-volt
 
 The target applications are auxiliary loads such as oil pumps and coolant pumps, where reliability, thermal performance, environmental robustness, and compact power-electronics design are essential.
 
-The repository is organised as an engineering portfolio project, demonstrating end-to-end drive-system engineering, including system specification, architecture design, power-stage reasoning, modelling, control design, simulation workflow, testing and debugging methodology and engineering documentation.
+The repository is organised as an engineering portfolio project, structured to demonstrate end-to-end drive-system engineering.  
+The full engineering scope spans system specification, architecture design, power-stage reasoning, modelling strategy, control design, simulation workflow, testing and debugging methodology, and engineering documentation, developed across phased project execution.
+
+> **Phase snapshot: Phase 1 complete**
+> Phase 1 establishes and freezes the system-level definition, functional architecture, and control-boundary design.  
+> Parameters at this stage are architectural anchors and structural placeholders, rather than performance commitments.  
+> Detailed power-stage design, implementation-level control, and validation are deferred to subsequent phases.
 
 All numerical parameters and models are illustrative and intended for demonstration rather than deployment.  
 The system parameters and models represent a generalized abstraction inspired by typical high-voltage auxiliary drive architectures, and do not correspond to any specific commercial product.
@@ -13,8 +19,8 @@ The system parameters and models represent a generalized abstraction inspired by
 
 # 1. Engineering Scope and Objectives
 
-Building on the overview given above, this section outlines the engineering domains and deliverables addressed in this project.  
-The work focuses on the following core elements:
+Building on the overview given above, this section outlines the overall engineering domains and deliverables addressed in this project.  
+The work focuses on the following core elements (addressed progressively across phases, as outlined in the development plan):
 
 ### • System specification and use-case definition
 Establishing operational requirements, environmental constraints and interface definitions.
@@ -41,30 +47,32 @@ Producing clear, traceable engineering documentation aligned with industry pract
 
 # 2. System Context and Initial Specifications
 
-*(These items will be refined and extended throughout Phase 1.)*
+*(These items were established during Phase 1 and may be further refined in later phases.)*
 
 * **Application:**  
   EV auxiliary drive (oil pump, coolant pump, etc.)
 
 * **Rated power:**  
-  15 kW nominal, short-term peak capability
+  15 kW power class for a high-voltage auxiliary drive system.  
+  This rating represents a system-level power class rather than a guaranteed continuous mechanical output,  
+  and reflects typical inverter, machine, duty-cycle, and thermal design constraints.
 
 * **DC bus:**  
   800 V high-voltage EV architecture
 
 * **Machine:**  
-  Three-phase PMSM, water-cooled, medium-speed
+  Three-phase PMSM, liquid-cooled (typically water-cooled in EV auxiliary applications)
 
 * **Control:**  
   Field-Oriented Control (FOC) with SVPWM
 
 * **Controller:**  
-  TI C2000-series DSPs (TMS320F28335 or TMS320F28377), with concepts applicable to other DSP/MCU platforms.
+  TI C2000-series DSPs (e.g. TMS320F28335 or TMS320F28377) are used as reference platforms; the concepts are applicable to other DSP/MCU platforms.
 
 * **Key considerations:**  
   reliability, protection, thermal constraints, EMI considerations, and start-up behaviour.
 
-More detailed requirements — torque-speed envelope, current limits, modulation constraints, efficiency objectives — will be added as the system requirement document (SRD) evolves.
+More detailed requirements — torque-speed envelope, current limits, modulation constraints, efficiency objectives — will be further detailed in subsequent phases.
 
 ---
 
@@ -100,7 +108,7 @@ This structure is designed to clearly separate requirements, design reasoning, m
 
 The project follows a four-phase development timeline aligned with typical automotive and industrial drive-development workflows:
 
-### Phase 1 — System Design & Scaffolding (Dec 2025)
+### Phase 1 — System Design & Scaffolding （Baseline Definition) (Dec 2025)
 
 * Define system requirements  
 * Establish repository structure  
@@ -134,11 +142,11 @@ This plan may evolve as refinements or additional demonstrations are added, whil
 
 # 5. Project Status
 
-Current phase: **Phase 1 — System Design & Scaffolding**
+Current phase: Phase 1 — completed
 
-This phase focuses on establishing the system-level definition, architecture, and documentation framework.
+Phase 1 establishes and freezes the system-level definition, functional architecture, control boundary assumptions, and documentation baseline that subsequent phases will build upon.
 
-Updates will be added throughout the development process as models, diagrams and documentation mature.
+Future updates will extend the repository in accordance with the defined development phases.
 
 ---
 
@@ -146,4 +154,6 @@ Updates will be added throughout the development process as models, diagrams and
 
 * All models, diagrams, and algorithms are illustrative.  
 * No proprietary firmware or commercial IP is included.  
-* The focus of this repository is engineering reasoning, clarity of structure, and methodological demonstration, rather than deployable embedded software.
+* This repository focuses on engineering reasoning, structural clarity, and methodological demonstration, rather than deployable embedded software.  
+* See LICENSE for usage and redistribution terms.
+

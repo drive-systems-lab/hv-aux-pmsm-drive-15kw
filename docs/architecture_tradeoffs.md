@@ -1,7 +1,6 @@
 # Architecture Trade-offs  
-15 kW-Class High-Voltage Auxiliary PMSM Drive (800 V Platform)
 
-Project: HV Auxiliary PMSM Drive  
+Project: HV Auxiliary PMSM Drive
 Phase: Phase 1 – System Design & Scaffolding  
 Status: Finalised for Phase 1  
 Purpose: System-level architectural trade-off record

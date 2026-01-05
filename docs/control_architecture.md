@@ -2,7 +2,6 @@
 
 > **Status (Phase 1 Snapshot)**  
 > This document defines the system-level functional control architecture baseline for the 15 kW-class high-voltage auxiliary PMSM drive (800 V platform).  
->
 > The scope is intentionally limited to architecture structure, signal interfaces, and functional partitioning. Control algorithms, parameterisation, and outer-loop or supervisory strategies are explicitly deferred to later phases.
 
 ---
@@ -58,7 +57,9 @@ The **Modulation** block represents the functional interface between voltage ref
 - Receives DC-link voltage information `vdc`
 - Produces phase-domain duty commands `d_abc` for the power stage
 
-In Phase 1, this block is explicitly defined as a **placeholder**.  
+In Phase 1, this block is explicitly defined as a **placeholder**, representing the modulation function at architectural level rather than a committed implementation.  
+At model level, this placeholder is instantiated as an *SVPWM skeleton* to provide a concrete but non-final executable structure.  
+
 The exact modulation strategy, timing behaviour, and implementation details are deferred to later phases.
 
 ---
