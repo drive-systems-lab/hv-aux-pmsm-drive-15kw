@@ -7,7 +7,7 @@ The target applications are auxiliary loads such as oil pumps and coolant pumps,
 The repository is organised as an engineering portfolio project, structured to demonstrate end-to-end drive-system engineering.  
 The full engineering scope spans system specification, architecture design, power-stage reasoning, modelling strategy, control design, simulation workflow, testing and debugging methodology, and engineering documentation, developed across phased project execution.
 
-> **Phase snapshot: Phase 1 complete**
+> **Phase snapshot: Phase 1 complete**  
 > Phase 1 establishes and freezes the system-level definition, functional architecture, and control-boundary design.  
 > Parameters at this stage are architectural anchors and structural placeholders, rather than performance commitments.  
 > Detailed power-stage design, implementation-level control, and validation are deferred to subsequent phases.

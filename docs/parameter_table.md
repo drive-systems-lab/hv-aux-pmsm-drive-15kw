@@ -1,6 +1,6 @@
 # Parameter Table – 15 kW HV Auxiliary PMSM Drive (800 V Platform)
 
-**Status (Phase 1 – Baseline):**  
+>**Status (Phase 1 – Baseline):**  
 > This table establishes the **system-level parameter baseline** for the 15 kW high-voltage auxiliary PMSM drive at Phase 1.  
 > It records architectural anchors and parameter structure, while detailed component specifications, control tuning, and implementation-level parameters are intentionally deferred to subsequent phases.
 
