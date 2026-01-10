@@ -16,9 +16,9 @@ Numerical design, component selection, detailed modelling, and implementation-le
 > The following topics are currently covered:
 > - Semiconductor technology considerations  
 > - dv/dt awareness and system-level implications  
+> - Switching frequency selection logic  
 >  
 > The following topics will be added progressively in later Phase 2 steps:
-> - Switching frequency selection logic  
 > - DC-link behaviour and ripple considerations  
 > - Protection philosophy and fault response strategy
 
@@ -97,7 +97,45 @@ This document intentionally does **not** enter PCB layout practices, EMI filteri
 
 ---
 
-## 4. Relationship to Subsequent Design Decisions
+## 4. Switching Frequency Selection Reasoning
+
+Switching frequency is treated as a **system-level trade-off variable** rather than an independently tunable parameter.
+
+Its selection is inherently constrained by semiconductor technology, dv/dt-related system considerations, control objectives, and DC-link behaviour. As a result, switching frequency reasoning must be conducted at system level, rather than through isolated optimisation.
+
+### 4.1 Coupling with Semiconductor Technology
+
+The choice of semiconductor technology conditions the feasible switching frequency range through differences in switching behaviour, loss distribution, and gate-drive sensitivity.
+
+Higher switching speeds enabled by wide-bandgap devices may relax certain performance constraints, while simultaneously tightening others related to dv/dt stress and system robustness.
+
+### 4.2 Coupling with dv/dt and EMI Considerations
+
+Switching frequency directly influences the repetition rate of voltage transitions and associated dv/dt-related effects.
+
+As switching frequency increases, dv/dt-related stresses and EMI susceptibility may become more pronounced, reinforcing the need to consider frequency selection in conjunction with system-level dv/dt awareness rather than as an isolated parameter.
+
+### 4.3 Coupling with Control Bandwidth and Modulation
+
+Switching frequency selection affects the achievable control bandwidth, modulation resolution, and current regulation performance.
+
+Conversely, control objectives and modulation strategies impose lower and upper bounds on practical switching frequency selection, linking control design considerations back to power-stage reasoning.
+
+### 4.4 Interaction with DC-Link Behaviour (Awareness Level)
+
+Switching frequency influences the spectral characteristics of inverter current draw and associated DC-link ripple behaviour.
+
+At Phase 2, this interaction is acknowledged at awareness level, without entering quantitative ripple analysis or component sizing, which are addressed in later design phases.
+
+### 4.5 Engineering Trade-Off Perspective
+
+From an engineering standpoint, switching frequency selection represents a balance between competing objectives, including efficiency, controllability, electromagnetic compatibility, and system robustness.
+
+Rather than converging on a single preferred value, Phase 2 reasoning establishes the **constraint relationships and trade-off dimensions** that govern feasible frequency selection under different system assumptions.
+
+---
+
+## 5. Relationship to Subsequent Design Decisions
 
 The considerations described above directly inform, but do not determine:
 
@@ -109,7 +147,7 @@ These topics are addressed in subsequent sections and documents, where detailed 
 
 ---
 
-## 5. Boundary to Later Phases
+## 6. Boundary to Later Phases
 
 The following activities are **explicitly outside the scope** of this document:
 
@@ -122,7 +160,7 @@ Such activities are deferred to Phase 3 and beyond, where sufficient modelling a
 
 ---
 
-## 6. Summary
+## 7. Summary
 
 This document establishes a **clear system-level reasoning framework** for semiconductor technology and dv/dt awareness within the power-stage baseline.
 
