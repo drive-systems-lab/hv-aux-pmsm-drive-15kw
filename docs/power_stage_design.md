@@ -183,7 +183,66 @@ Detailed ripple calculation, capacitor sizing, impedance modelling, and lifetime
 
 ---
 
-## 6. Relationship to Subsequent Design Decisions
+## 6. DC-Link Coupling with Inverter Operation and Control Assumptions
+
+The Phase-2 power-stage reasoning developed in the preceding sections implicitly relies on specific assumptions regarding DC-link behaviour.  
+This section makes those dependencies explicit by clarifying how inverter operation and control-related reasoning are conditioned by the assumed DC-link characteristics, and by identifying the boundaries within which the Phase-2 conclusions remain valid.
+
+This discussion does not introduce new design elements or requirements.  
+Instead, it serves to articulate the **assumption structure** underlying Phase-2 reasoning and to define its domain of applicability.
+
+---
+
+### 6.1 Coupling with Inverter Operation
+
+At Phase 2, inverter operation is implicitly reasoned under the assumption that the DC-link behaves as an effective buffering and decoupling element between the high-voltage source and the switching inverter.
+
+In particular, Phase-2 reasoning assumes that:
+
+- Short-term power imbalance arising from PWM modulation, switching events, and load transients is primarily absorbed by the DC-link, rather than being directly reflected upstream or downstream.
+- DC-link dynamics do not dominate inverter operational behaviour over the time scales relevant to switching and modulation decisions.
+- Inverter operation can therefore be analysed assuming a quasi-stable DC-link voltage reference at system level.
+
+Under these assumptions, inverter-related reasoning—such as feasible switching frequency ranges, modulation continuity, and transient operational behaviour—can be conducted without explicit modelling of fast DC-link voltage dynamics.
+
+It is emphasised that this represents a **reasoning assumption**, not a guaranteed physical outcome, and is adopted to maintain appropriate abstraction at Phase 2.
+
+---
+
+### 6.2 Coupling with Control Assumptions
+
+Although control design is not developed at Phase 2, several control-related assumptions are
+implicitly embedded within the power-stage reasoning.
+
+Specifically, Phase-2 reasoning assumes that:
+
+- DC-link voltage variation is a **slow-varying quantity** relative to the dominant control bandwidths of the inverter and current regulation loops.
+- Short-term DC-link voltage fluctuations do not materially distort modulation feasibility or invalidate switching frequency reasoning at system level.
+- Control strategies can be reasoned assuming the DC-link functions as a sufficiently stiff intermediate energy node for the purposes of power-stage trade-off analysis.
+
+These assumptions enable control-related considerations—such as bandwidth feasibility, modulation resolution, and switching frequency bounds—to be discussed without prematurely entering control-loop design or DC-link voltage regulation strategies.
+
+As with inverter operation, these assumptions define the **scope of abstraction** adopted in Phase-2 reasoning rather than prescribing implementation behaviour.
+
+---
+
+### 6.3 Validity Boundaries and Invalidation Conditions
+
+The Phase-2 power-stage conclusions established in this document remain valid only while the
+DC-link behaviour conforms to the assumptions outlined above.
+
+Phase-2 reasoning may need to be revisited if any of the following conditions arise:
+
+- DC-link voltage variation becomes comparable to, or interacts strongly with, the intended control bandwidth.
+- Upstream source impedance or operating conditions deviate significantly from the assumed level of stiffness implicit in Phase-2 reasoning.
+- The DC-link is required to participate actively in fast transient regulation rather than serving primarily as a buffering element.
+
+Such conditions do not represent design failures.  
+Rather, they define the **boundary of validity** for the abstraction level adopted in Phase 2 and indicate scenarios in which more detailed modelling, quantitative analysis, or architectural re-evaluation becomes necessary in subsequent design phases.
+
+---
+
+## 7. Relationship to Subsequent Design Decisions
 
 The considerations described above directly inform, but do not determine:
 
@@ -195,7 +254,7 @@ These topics are addressed in subsequent sections and documents, where detailed 
 
 ---
 
-## 7. Boundary to Later Phases
+## 8. Boundary to Later Phases
 
 The following activities are **explicitly outside the scope** of this document:
 
@@ -208,8 +267,8 @@ Such activities are deferred to Phase 3 and beyond, where sufficient modelling a
 
 ---
 
-## 8. Summary
+## 9. Summary
 
-This document establishes a **clear system-level reasoning framework** for semiconductor technology and dv/dt awareness within the power-stage baseline.
+This document establishes a **clear system-level reasoning framework** for semiconductor technology, dv/dt awareness, and DC-link-related system assumptions within the power-stage baseline.
 
 By articulating how these factors influence engineering trade-offs—without committing to numerical or implementation detail—it supports disciplined and traceable design evolution in later phases.
