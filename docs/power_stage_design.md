@@ -171,7 +171,7 @@ From a reasoning standpoint, DC-link behaviour exhibits qualitative relationship
 
 These relationships condition feasible design assumptions without, at this stage, imposing numerical constraints or design commitments.
 
-### 5.4 Engineering Implications at Phase 2
+### 5.4 Engineering Implications
 
 At Phase 2, DC-link behaviour reasoning serves to:
 
@@ -242,7 +242,92 @@ Rather, they define the **boundary of validity** for the abstraction level adopt
 
 ---
 
-## 7. Relationship to Subsequent Design Decisions
+## 7. Protection Philosophy and Fault-Response Awareness
+
+At Phase 2, protection is not treated as a set of implemented mechanisms or parameterised thresholds.  
+Instead, protection is approached as an **engineering philosophy** that frames how abnormal operating conditions and fault scenarios are conceptually understood at system level.
+
+The purpose of this section is to articulate the **fault-response awareness** embedded within the power-stage reasoning, without introducing protection hardware, control logic, or quantitative limits.
+
+---
+
+### 7.1 Role of Protection Philosophy
+
+Within the scope of Phase 2, protection philosophy serves to:
+
+- Establish awareness of fault and abnormal operating domains that may challenge Phase-2 assumptions.
+- Clarify how power-stage reasoning should be interpreted when system behaviour deviates from nominal conditions.
+- Preserve clear separation between **conceptual fault awareness** and **implementation-level protection design**.
+
+Protection philosophy at this stage does not define how faults are detected or mitigated.  
+Rather, it defines how the system is **expected to behave conceptually** when operating outside the
+idealised assumptions used for power-stage reasoning.
+
+---
+
+### 7.2 Abnormal Operating Conditions at System Level
+
+From a system-level perspective, the inverter power stage may encounter conditions that fall outside
+the nominal operating envelope assumed in Phase-2 reasoning, including but not limited to:
+
+- Short-circuit or overload events at the inverter output.
+- DC-link voltage excursions due to upstream disturbances or energy imbalance.
+- Abnormal switching or modulation states resulting from control or sensing anomalies.
+- Thermal or electrical stress conditions that temporarily invalidate steady-state assumptions.
+
+At Phase 2, these conditions are acknowledged **qualitatively**, without assigning fault categories,
+severity levels, or protection thresholds.
+
+---
+
+### 7.3 Relationship to Phase-2 Reasoning Assumptions
+
+The power-stage reasoning developed in this document is intentionally based on nominal and near-nominal operating assumptions, as articulated in earlier sections.
+
+Protection philosophy provides the contextual understanding that:
+
+- Phase-2 reasoning is not expected to remain valid under all fault or abnormal conditions.
+- Certain fault scenarios inherently violate the abstraction level adopted for switching, DC-link, and control-related reasoning.
+- The presence of abnormal conditions does not indicate deficiencies in the reasoning, but rather signals a transition beyond its intended domain of applicability.
+- Protection philosophy provides a conceptual bridge between nominal-phase reasoning and subsequent fault-handling mechanisms, indicating when additional modelling, architectural decisions, or protective actions must take precedence.
+
+This distinction ensures that nominal-operation reasoning is not retroactively burdened with
+fault-handling requirements at an inappropriate design phase.
+
+---
+
+### 7.4 Implications for Subsequent Design Phases
+
+The fault-response awareness established here informs later design phases by:
+
+- Highlighting the need for explicit protection strategies once implementation-level design begins.
+- Providing conceptual guidance for identifying which assumptions must be safeguarded or monitored.
+- Supporting traceable transition from **reasoning-level awareness** to **design-level protection mechanisms**.
+- Indicating the classes of operating conditions under which protection-related considerations must supersede nominal-phase reasoning assumptions.
+
+Detailed protection architecture, fault detection logic, response timing, and component-level implementation are intentionally deferred to subsequent phases, where quantitative models and
+validation context are available.
+
+---
+
+### 7.5 Boundary of Scope
+
+This section deliberately excludes:
+
+- Protection circuit topology or component selection.
+- Fault-detection algorithms or control logic.
+- Numerical thresholds, timing constraints, or response coordination.
+- Formal safety analysis or compliance-oriented fault classification.
+
+Such topics are addressed in later design phases as part of dedicated protection and validation work.
+
+At Phase 2, protection philosophy remains a **conceptual framing tool**, ensuring that power-stage
+reasoning is interpreted with appropriate engineering awareness of abnormal operating conditions,
+without prematurely constraining design freedom.
+
+---
+
+## 8. Relationship to Subsequent Design Decisions
 
 The considerations described above directly inform, but do not determine:
 
@@ -254,7 +339,7 @@ These topics are addressed in subsequent sections and documents, where detailed 
 
 ---
 
-## 8. Boundary to Later Phases
+## 9. Boundary to Later Phases
 
 The following activities are **explicitly outside the scope** of this document:
 
@@ -267,7 +352,7 @@ Such activities are deferred to Phase 3 and beyond, where sufficient modelling a
 
 ---
 
-## 9. Summary
+## 10. Summary
 
 This document establishes a **clear system-level reasoning framework** for semiconductor technology, dv/dt awareness, and DC-link-related system assumptions within the power-stage baseline.
 
