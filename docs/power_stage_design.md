@@ -242,71 +242,71 @@ Rather, they define the **boundary of validity** for the abstraction level adopt
 
 ---
 
-## 7. Protection Philosophy and Fault-Response Awareness
+## 7. Fault-Domain Awareness and Reasoning Boundaries
 
-At Phase 2, protection is not treated as a set of implemented mechanisms or parameterised thresholds.  
-Instead, protection is approached as an **engineering philosophy** that frames how abnormal operating conditions and fault scenarios are conceptually understood at system level.
+At Phase 2, fault and abnormal operating conditions are not treated as design targets,
+implemented mechanisms, or parameterised protection strategies.  
+Instead, they are considered at a **conceptual awareness level**, serving to frame the
+**validity boundaries** of the nominal power-stage reasoning developed in this document.
 
-The purpose of this section is to articulate the **fault-response awareness** embedded within the power-stage reasoning, without introducing protection hardware, control logic, or quantitative limits.
+The purpose of this section is to articulate how the power-stage reasoning should be
+**interpreted and bounded** when system behaviour departs from nominal assumptions,
+without introducing protection hardware, control logic, or quantitative limits.
 
 ---
 
-### 7.1 Role of Protection Philosophy
+### 7.1 Role of Fault-Domain Awareness
 
-Within the scope of Phase 2, protection philosophy serves to:
+Within the scope of Phase 2, fault-domain awareness serves to:
 
-- Establish awareness of fault and abnormal operating domains that may challenge Phase-2 assumptions.
-- Clarify how power-stage reasoning should be interpreted when system behaviour deviates from nominal conditions.
-- Preserve clear separation between **conceptual fault awareness** and **implementation-level protection design**.
+- Establish awareness of operating domains in which nominal Phase-2 assumptions may no longer hold.
+- Clarify how power-stage reasoning should be interpreted when system behaviour deviates from normal conditions.
+- Preserve a clear separation between **conceptual awareness of abnormal domains** and **implementation-level protection design**.
 
-Protection philosophy at this stage does not define how faults are detected or mitigated.  
-Rather, it defines how the system is **expected to behave conceptually** when operating outside the
-idealised assumptions used for power-stage reasoning.
+At this stage, no assumptions are made regarding how faults are detected, classified, or mitigated.  
+Rather, this awareness defines how the system is **conceptually expected to transition beyond** the idealised operating conditions used for power-stage reasoning.
 
 ---
 
 ### 7.2 Abnormal Operating Conditions at System Level
 
-From a system-level perspective, the inverter power stage may encounter conditions that fall outside
-the nominal operating envelope assumed in Phase-2 reasoning, including but not limited to:
+From a system-level perspective, the inverter power stage may encounter operating conditions that fall outside the nominal envelope assumed in Phase-2 reasoning, including but not limited to:
 
 - Short-circuit or overload events at the inverter output.
-- DC-link voltage excursions due to upstream disturbances or energy imbalance.
-- Abnormal switching or modulation states resulting from control or sensing anomalies.
+- DC-link voltage excursions arising from upstream disturbances or energy imbalance.
+- Abnormal switching or modulation states caused by control, sensing, or timing anomalies.
 - Thermal or electrical stress conditions that temporarily invalidate steady-state assumptions.
 
-At Phase 2, these conditions are acknowledged **qualitatively**, without assigning fault categories,
-severity levels, or protection thresholds.
+At Phase 2, such conditions are acknowledged **qualitatively**, without assigning fault categories, severity levels, response priorities, or protection thresholds.
 
 ---
 
 ### 7.3 Relationship to Phase-2 Reasoning Assumptions
 
-The power-stage reasoning developed in this document is intentionally based on nominal and near-nominal operating assumptions, as articulated in earlier sections.
+The power-stage reasoning developed in this document is intentionally based on nominal and
+near-nominal operating assumptions, as articulated in earlier sections.
 
-Protection philosophy provides the contextual understanding that:
+Fault-domain awareness provides the contextual understanding that:
 
 - Phase-2 reasoning is not expected to remain valid under all fault or abnormal conditions.
-- Certain fault scenarios inherently violate the abstraction level adopted for switching, DC-link, and control-related reasoning.
-- The presence of abnormal conditions does not indicate deficiencies in the reasoning, but rather signals a transition beyond its intended domain of applicability.
-- Protection philosophy provides a conceptual bridge between nominal-phase reasoning and subsequent fault-handling mechanisms, indicating when additional modelling, architectural decisions, or protective actions must take precedence.
+- Certain abnormal scenarios inherently violate the abstraction level adopted for switching, DC-link, and control-related reasoning.
+- The presence of such conditions does not indicate deficiencies in the reasoning, but rather signals a transition beyond its intended domain of applicability.
+- Awareness of these boundaries provides a conceptual bridge between nominal-operation reasoning and subsequent fault-handling considerations.
 
-This distinction ensures that nominal-operation reasoning is not retroactively burdened with
-fault-handling requirements at an inappropriate design phase.
+This distinction ensures that nominal-operation reasoning is not retroactively burdened with fault-handling requirements at an inappropriate design phase.
 
 ---
 
 ### 7.4 Implications for Subsequent Design Phases
 
-The fault-response awareness established here informs later design phases by:
+The fault-domain awareness established here informs later design phases by:
 
-- Highlighting the need for explicit protection strategies once implementation-level design begins.
-- Providing conceptual guidance for identifying which assumptions must be safeguarded or monitored.
-- Supporting traceable transition from **reasoning-level awareness** to **design-level protection mechanisms**.
-- Indicating the classes of operating conditions under which protection-related considerations must supersede nominal-phase reasoning assumptions.
+- Indicating when explicit protection strategies and fault-handling mechanisms become necessary.
+- Providing conceptual guidance for identifying which nominal assumptions must be safeguarded, monitored, or relaxed.
+- Supporting a traceable transition from **reasoning-level awareness** to **design-level protection frameworks**.
+- Clarifying the operating domains in which protection-related considerations must supersede nominal-phase reasoning assumptions.
 
-Detailed protection architecture, fault detection logic, response timing, and component-level implementation are intentionally deferred to subsequent phases, where quantitative models and
-validation context are available.
+Detailed protection architecture, fault detection logic, response timing, and component-level implementation are intentionally deferred to subsequent phases, where quantitative models and validation context are available.
 
 ---
 
@@ -321,9 +321,8 @@ This section deliberately excludes:
 
 Such topics are addressed in later design phases as part of dedicated protection and validation work.
 
-At Phase 2, protection philosophy remains a **conceptual framing tool**, ensuring that power-stage
-reasoning is interpreted with appropriate engineering awareness of abnormal operating conditions,
-without prematurely constraining design freedom.
+At Phase 2, fault-domain awareness functions solely as a **reasoning boundary tool**,
+ensuring that power-stage reasoning is interpreted with appropriate engineering awareness of abnormal operating conditions, without prematurely constraining design freedom.
 
 ---
 
