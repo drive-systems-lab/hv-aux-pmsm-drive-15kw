@@ -86,7 +86,112 @@ It establishes only the conceptual linkage between protection considerations and
 
 ---
 
-## 5. Phase 2 Scope Boundary
+## 5. System State Reasoning and Power-Stage Context
+
+System-level protection judgement cannot be meaningfully applied without an explicit understanding of **system operating states**.  
+In power electronic systems, state abstraction provides a necessary engineering context for interpreting protection relevance, urgency, and intent.
+
+At Phase 2, system states are treated as **engineering reasoning constructs**, rather than as defined control implementations or executable state machines.
+
+---
+
+### 5.1 Rationale for State-Based Reasoning
+
+The inverter system does not operate under a single, uniform condition throughout its lifecycle.  
+Different stages of operation impose different structural, energetic, and safety considerations on the power stage.
+
+State-based reasoning allows:
+
+- System behaviour to be interpreted relative to its current operating phase  
+- Protection judgement to be contextualised without embedding control logic  
+- Nominal power-stage reasoning to be understood as **state-dependent**, rather than universally valid  
+
+This abstraction separates **engineering intent and judgement** from later implementation-specific realisations.
+
+---
+
+### 5.2 Typical System Operating States
+
+From a system engineering perspective, the inverter operation can be conceptually reasoned using a small number of representative states:
+
+#### Startup
+
+Startup represents the phase during which energy paths are being established and system conditions are transitioning toward nominal operation.
+
+From a power-stage perspective:
+
+- Electrical stress conditions may differ from steady-state assumptions  
+- Nominal operating limits may not yet fully apply  
+- Protection interpretation prioritises safe energy establishment rather than sustained operation  
+
+#### Run
+
+Run corresponds to nominal operation where steady-state power-stage reasoning is expected to be valid.
+
+In this state:
+
+- Power-stage behaviour aligns with nominal design assumptions  
+- Protection judgement focuses on maintaining system integrity under expected operating envelopes  
+- Deviations from nominal behaviour become meaningful indicators of abnormal conditions  
+
+#### Fault
+
+Fault represents conditions where nominal power-stage reasoning no longer holds.
+
+In this state:
+
+- Protection judgement supersedes performance objectives  
+- Structural and energetic safety becomes the dominant concern  
+- System-level interpretation acknowledges that standard reasoning assumptions are invalid  
+
+No distinction is made here regarding fault detection or response execution.
+
+#### Recovery
+
+Recovery represents the conceptual phase in which the system transitions from a faulted or degraded condition back toward normal operation.
+
+From a system-level viewpoint:
+
+- Structural and thermal constraints influence permissible behaviour  
+- Protection interpretation considers system readiness rather than immediate performance  
+- Recovery is treated as a distinct engineering context, not as a control sequence  
+
+---
+
+### 5.3 Relationship Between System States and Power-Stage Structure
+
+System states are not arbitrary labels; they emerge from the **physical structure and operating constraints of the power stage**.
+
+The power-stage topology, energy storage elements, and switching structure inherently define:
+
+- Which operating states are meaningful from an engineering perspective  
+- Under which states nominal power-stage reasoning is applicable  
+- When protection judgement must override nominal assumptions  
+
+State reasoning therefore acts as an **intermediate abstraction layer** linking:
+
+- Power-stage physical structure  
+- System-level protection judgement  
+- Subsequent control and implementation decisions  
+
+This separation ensures that later design phases can implement state machines and control logic without reinterpreting the underlying system-level engineering intent.
+
+---
+
+### 5.4 Scope Boundary for State Reasoning
+
+This section does **not** define:
+
+- State transition conditions or triggering logic  
+- Timing relationships or sequencing  
+- Control software architecture  
+- Fault detection or classification mechanisms  
+
+State reasoning is intentionally limited to **conceptual interpretation and structural context**, consistent with Phase 2 objectives.
+
+---
+
+## 6. Phase 2 Scope Boundary
 
 To maintain Phase 2 integrity, the following topics are explicitly outside the scope of this document:
 
