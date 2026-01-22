@@ -17,6 +17,7 @@ While the latter describes the limits of validity of nominal power-stage reasoni
 Protection considerations in power electronic systems naturally span multiple layers.  
 At Phase 2, it is important to explicitly distinguish between **system-level protection** and **device-level protection**, as they serve different engineering purposes.
 
+
 ### 2.1 Device-Level Protection
 
 Device-level protection focuses on the immediate safeguarding of individual components, such as power semiconductors or passive elements.  
@@ -27,6 +28,7 @@ It is typically characterised by:
 - Limited or no awareness of overall system operating context  
 
 Device-level protection is essential for component survivability but does not, by itself, define system behaviour.
+
 
 ### 2.2 System-Level Protection
 
@@ -46,6 +48,7 @@ At Phase 2, system-level protection is treated as a **conceptual engineering con
 Faults and abnormal conditions are often informally described as *fast* or *slow*.  
 Within this document, these terms are used **only in an engineering interpretation sense**, rather than as formal classifications.
 
+
 ### 3.1 Fast Faults
 
 Fast faults are understood as conditions that demand **immediate interruption of energy flow** to prevent damage or unsafe operation.  
@@ -56,6 +59,7 @@ From a system engineering perspective, they imply:
 - Priority given to immediate protective action  
 
 No assumptions are made at this stage regarding detection mechanisms, response timing, or implementation strategies.
+
 
 ### 3.2 Slow Faults
 
@@ -93,7 +97,6 @@ In power electronic systems, state abstraction provides a necessary engineering 
 
 At Phase 2, system states are treated as **engineering reasoning constructs**, rather than as defined control implementations or executable state machines.
 
----
 
 ### 5.1 Rationale for State-Based Reasoning
 
@@ -108,7 +111,6 @@ State-based reasoning allows:
 
 This abstraction separates **engineering intent and judgement** from later implementation-specific realisations.
 
----
 
 ### 5.2 Typical System Operating States
 
@@ -156,7 +158,6 @@ From a system-level viewpoint:
 - Protection interpretation considers system readiness rather than immediate performance  
 - Recovery is treated as a distinct engineering context, not as a control sequence  
 
----
 
 ### 5.3 Relationship Between System States and Power-Stage Structure
 
@@ -176,7 +177,6 @@ State reasoning therefore acts as an **intermediate abstraction layer** linking:
 
 This separation ensures that later design phases can implement state machines and control logic without reinterpreting the underlying system-level engineering intent.
 
----
 
 ### 5.4 Scope Boundary for State Reasoning
 

@@ -7,21 +7,16 @@ All reasoning in this document is based on the **baseline reference configuratio
 
 Numerical design, component selection, detailed modelling, and implementation-level decisions are explicitly deferred to later phases.
 
----
-
-> **Status Snapshot (Phase 2 — In Progress)**  
+> **Status Snapshot (Phase 2 — Complete)**  
 >  
-> This document is a **living reasoning record** for Phase 2.  
->  
-> The following topics are currently covered:
-> - Semiconductor technology considerations  
-> - dv/dt awareness and system-level implications  
-> - Switching frequency selection logic 
-> - DC-link behaviour and ripple considerations   
->  
-> The following topics will be added progressively in later Phase 2 steps:
-> - Protection philosophy and fault response strategy
-
+>This document records the **completed system-level power-stage reasoning** developed during Phase 2.
+>
+>The following topics are addressed within the Phase-2 abstraction level:
+>- Semiconductor technology considerations
+>- dv/dt awareness and system-level implications
+>- Switching frequency selection reasoning
+>- DC-link behaviour and ripple considerations
+>- Fault-domain awareness and reasoning boundaries relevant to protection interpretation
 
 ## 1. Role of This Document in Phase 2
 
@@ -44,6 +39,7 @@ Two representative classes are considered for reasoning purposes:
 
 This discussion is intentionally **technology-oriented**, not **device-specific**.
 
+
 ### 2.1 System-Level Behavioural Differences
 
 From a system perspective, different semiconductor technologies exhibit characteristic behavioural tendencies, including:
@@ -54,6 +50,7 @@ From a system perspective, different semiconductor technologies exhibit characte
 - Thermal stress distribution under dynamic operation  
 
 These tendencies influence system-level constraints without directly determining a specific implementation.
+
 
 ### 2.2 Impact on Engineering Trade-Off Space
 
@@ -74,6 +71,7 @@ Independent of the specific device selected, inverter operation inherently intro
 
 At Phase 2, dv/dt is treated as a **system-level awareness topic**, not a numerical design parameter.
 
+
 ### 3.1 Affected System Domains
 
 Elevated dv/dt levels may influence multiple parts of the system, including:
@@ -84,6 +82,7 @@ Elevated dv/dt levels may influence multiple parts of the system, including:
 - Robustness of sensing and control interfaces  
 
 These effects are coupled to overall system architecture rather than to any single component.
+
 
 ### 3.2 Engineering Implications
 
@@ -103,11 +102,13 @@ Switching frequency is treated as a **system-level trade-off variable** rather t
 
 Its selection is inherently constrained by semiconductor technology, dv/dt-related system considerations, control objectives, and DC-link behaviour. As a result, switching frequency reasoning must be conducted at system level, rather than through isolated optimisation.
 
+
 ### 4.1 Coupling with Semiconductor Technology
 
 The choice of semiconductor technology conditions the feasible switching frequency range through differences in switching behaviour, loss distribution, and gate-drive sensitivity.
 
 Higher switching speeds enabled by wide-bandgap devices may relax certain performance constraints, while simultaneously tightening others related to dv/dt stress and system robustness.
+
 
 ### 4.2 Coupling with dv/dt and EMI Considerations
 
@@ -115,17 +116,20 @@ Switching frequency directly influences the repetition rate of voltage transitio
 
 As switching frequency increases, dv/dt-related stresses and EMI susceptibility may become more pronounced, reinforcing the need to consider frequency selection in conjunction with system-level dv/dt awareness rather than as an isolated parameter.
 
+
 ### 4.3 Coupling with Control Bandwidth and Modulation
 
 Switching frequency selection affects the achievable control bandwidth, modulation resolution, and current regulation performance.
 
 Conversely, control objectives and modulation strategies impose lower and upper bounds on practical switching frequency selection, linking control design considerations back to power-stage reasoning.
 
+
 ### 4.4 Interaction with DC-Link Behaviour (Awareness Level)
 
 Switching frequency influences the spectral characteristics of inverter current draw and associated DC-link ripple behaviour.
 
 At Phase 2, this interaction is acknowledged at awareness level, without entering quantitative ripple analysis or component sizing, which are addressed in later design phases.
+
 
 ### 4.5 Engineering Trade-Off Perspective
 
@@ -141,6 +145,7 @@ Within the inverter power stage, the DC-link serves not merely as a passive ener
 
 At Phase 2, DC-link considerations are treated at a **behavioural and architectural level**, focusing on its role in shaping power-stage dynamics rather than on component-level design.
 
+
 ### 5.1 DC-Link as an Energy Buffering Element
 
 From a system perspective, the DC-link performs several foundational roles:
@@ -150,6 +155,7 @@ From a system perspective, the DC-link performs several foundational roles:
 - Supporting transient power imbalance during load changes and modulation events  
 
 These roles are intrinsic to the power-stage architecture and exist independently of specific capacitor technologies or sizing choices.
+
 
 ### 5.2 Sources of DC-Link Voltage and Current Variation
 
@@ -161,6 +167,7 @@ At system level, DC-link voltage and current behaviour is influenced by multiple
 
 The resulting DC-link behaviour reflects **aggregate system interactions**, rather than the characteristics of any single subsystem.
 
+
 ### 5.3 Qualitative Relationships to Other Power-Stage Elements
 
 From a reasoning standpoint, DC-link behaviour exhibits qualitative relationships with:
@@ -170,6 +177,7 @@ From a reasoning standpoint, DC-link behaviour exhibits qualitative relationship
 - System-level operating assumptions, such as allowable voltage fluctuation and transient tolerance  
 
 These relationships condition feasible design assumptions without, at this stage, imposing numerical constraints or design commitments.
+
 
 ### 5.4 Engineering Implications
 
@@ -191,7 +199,6 @@ This section makes those dependencies explicit by clarifying how inverter operat
 This discussion does not introduce new design elements or requirements.  
 Instead, it serves to articulate the **assumption structure** underlying Phase-2 reasoning and to define its domain of applicability.
 
----
 
 ### 6.1 Coupling with Inverter Operation
 
@@ -207,7 +214,6 @@ Under these assumptions, inverter-related reasoning—such as feasible switching
 
 It is emphasised that this represents a **reasoning assumption**, not a guaranteed physical outcome, and is adopted to maintain appropriate abstraction at Phase 2.
 
----
 
 ### 6.2 Coupling with Control Assumptions
 
@@ -224,7 +230,6 @@ These assumptions enable control-related considerations—such as bandwidth feas
 
 As with inverter operation, these assumptions define the **scope of abstraction** adopted in Phase-2 reasoning rather than prescribing implementation behaviour.
 
----
 
 ### 6.3 Validity Boundaries and Invalidation Conditions
 
@@ -253,7 +258,6 @@ The purpose of this section is to articulate how the power-stage reasoning shoul
 **interpreted and bounded** when system behaviour departs from nominal assumptions,
 without introducing protection hardware, control logic, or quantitative limits.
 
----
 
 ### 7.1 Role of Fault-Domain Awareness
 
@@ -266,7 +270,6 @@ Within the scope of Phase 2, fault-domain awareness serves to:
 At this stage, no assumptions are made regarding how faults are detected, classified, or mitigated.  
 Rather, this awareness defines how the system is **conceptually expected to transition beyond** the idealised operating conditions used for power-stage reasoning.
 
----
 
 ### 7.2 Abnormal Operating Conditions at System Level
 
@@ -279,7 +282,6 @@ From a system-level perspective, the inverter power stage may encounter operatin
 
 At Phase 2, such conditions are acknowledged **qualitatively**, without assigning fault categories, severity levels, response priorities, or protection thresholds.
 
----
 
 ### 7.3 Relationship to Phase-2 Reasoning Assumptions
 
@@ -295,7 +297,6 @@ Fault-domain awareness provides the contextual understanding that:
 
 This distinction ensures that nominal-operation reasoning is not retroactively burdened with fault-handling requirements at an inappropriate design phase.
 
----
 
 ### 7.4 Implications for Subsequent Design Phases
 
@@ -308,7 +309,6 @@ The fault-domain awareness established here informs later design phases by:
 
 Detailed protection architecture, fault detection logic, response timing, and component-level implementation are intentionally deferred to subsequent phases, where quantitative models and validation context are available.
 
----
 
 ### 7.5 Boundary of Scope
 

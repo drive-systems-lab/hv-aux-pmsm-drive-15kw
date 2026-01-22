@@ -28,6 +28,7 @@ Engineering judgement in Phase 2 answers the question:
 
 Power stage design judgement in Phase 2 is organised around the following primary dimensions. These dimensions are considered **before** any numerical optimisation or component sizing.
 
+
 ### 2.1 Voltage Level and Insulation Stress
 
 The high-voltage operating environment introduces system-level concerns such as:
