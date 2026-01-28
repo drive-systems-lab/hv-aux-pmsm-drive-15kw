@@ -17,7 +17,7 @@ The scope of Phase 2 includes:
 - Discussion of **switching frequency range**, dv/dt implications, and associated system-level risks (e.g. insulation stress, EMI awareness), without numerical optimisation.
 - **DC bus capacitor design methodology**, including ripple current considerations and design reasoning, without final component sizing.
 - Definition of **power-stage-related protection concepts**, including fault categories and high-level protection philosophy.
-- Definition of the **operational state machine structure** relevant to power stage enable, fault handling, and safe-state transitions.
+- Definition of the **operational state machine structure** *(conceptual structure only; not executable logic)* relevant to power stage enable, fault handling, and safe-state transitions.
 
 Phase 2 answers the question:
 > *What power stage design choices are appropriate, and why are they reasonable at system level?*

@@ -49,11 +49,15 @@ At system level, the baseline power stage consists of the following functional e
 - Three-phase inverter bridge  
 - AC-side connection to the PMSM  
 
+Note: In the Phase-2 conceptual schematic, the “HV DC Bus” block represents a system-level abstraction that includes the DC-link energy-buffering function, unless explicitly separated in later-phase diagrams.
+
 The baseline assumes a **direct DC–AC conversion path**, without any intermediate DC/DC stage. Detailed circuit realisation, component sizing, parasitic effects, and layout considerations are intentionally outside the scope of this definition.
 
 ---
 
 ## 4. Measurement and Control Interfaces
+
+At Phase 2 baseline level, some measurement and control interfaces are assumed to be present but are intentionally not elaborated or depicted in the system-level diagrams.
 
 The baseline defines the presence of essential **measurement and control interfaces** required for safe and controllable operation, including:  
 
@@ -62,6 +66,8 @@ The baseline defines the presence of essential **measurement and control interfa
 - Inverter temperature monitoring  
 - Gate-drive control interface  
 - Enable / disable and fault signalling paths  
+
+Among these, interfaces such as **gate-drive control** and **enable/disable or fault signalling** are treated as presence-only assumptions and are therefore not depicted in the system-level diagrams.
 
 Specific sensing technologies, signal conditioning methods, sampling strategies, and control-loop implementation details are deferred to later phases.
 

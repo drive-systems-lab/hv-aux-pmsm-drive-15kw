@@ -7,25 +7,26 @@ All reasoning in this document is based on the **baseline reference configuratio
 
 Numerical design, component selection, detailed modelling, and implementation-level decisions are explicitly deferred to later phases.
 
-> **Status Snapshot (Phase 2 — Complete)**  
+> **Status Snapshot (Phase 2 — Reasoning Consolidated; Integration & Hygiene Pending)**  
 >  
->This document records the **completed system-level power-stage reasoning** developed during Phase 2.
+> This document consolidates the **system-level power-stage reasoning** developed during Phase 2.  
+> The content remains strictly within the Phase-2 abstraction level and is subject only to integration and hygiene refinements (wording, cross-referencing, and scope clarification), not new technical additions.
 >
->The following topics are addressed within the Phase-2 abstraction level:
->- Semiconductor technology considerations
->- dv/dt awareness and system-level implications
->- Switching frequency selection reasoning
->- DC-link behaviour and ripple considerations
->- Fault-domain awareness and reasoning boundaries relevant to protection interpretation
+> The following topics are addressed within the Phase-2 abstraction level:
+> - Semiconductor technology considerations
+> - dv/dt awareness and system-level implications
+> - Switching frequency selection reasoning
+> - DC-link behaviour and ripple considerations
+> - Fault-domain awareness and reasoning boundaries relevant to protection interpretation
 
 ## 1. Role of This Document in Phase 2
 
 Within the overall project structure:
 
 - The **power-stage baseline**, defined in a separate document, specifies *what* configuration is assumed.
-- This document explains *how* engineering judgement is applied **based on that baseline**.
+- This document articulates *why* the Phase-2 power-stage reasoning is defensible at system level, given that baseline configuration, by making key trade-off dimensions, constraints, and judgement boundaries explicit.
 
-The purpose of this document is to articulate **engineering awareness, trade-off dimensions, and constraint relationships**, rather than to converge on a final hardware solution.
+The purpose of this document is **not to converge on a final hardware solution**, but to support disciplined system-level reasoning prior to quantitative design and implementation in subsequent phases.
 
 ---
 

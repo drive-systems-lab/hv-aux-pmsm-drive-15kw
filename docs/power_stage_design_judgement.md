@@ -3,7 +3,7 @@
 This document defines the **engineering judgement framework** used for power stage design decisions
 in **Phase 2 — Power Stage Design** of the 15 kW High-Voltage Auxiliary PMSM Drive (800 V platform).
 
-The purpose of this document is to make explicit **how design decisions are evaluated and prioritised** at system level, before committing to numerical design, detailed modelling, or implementation work in later phases.
+The purpose of this document is to make explicit **the criteria and priority logic by which design decisions are evaluated** at system level, before committing to numerical design, detailed modelling, or implementation work in later phases.
 
 This document does **not** present final design choices or calculated results. Instead, it establishes the **decision logic and constraints** that govern all Phase 2 power-stage-related discussions.
 
