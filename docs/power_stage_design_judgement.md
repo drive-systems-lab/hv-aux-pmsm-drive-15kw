@@ -59,9 +59,9 @@ Switching behaviour is evaluated qualitatively with respect to:
 At this stage, switching frequency is treated as a **design dimension**, not as a fixed or optimised parameter.
 
 
-### 2.4 DC Bus Energy Handling and Stability
+### 2.4 DC-Link Energy Handling and Stability
 
-DC bus considerations focus on:
+DC-link considerations focus on:
 - Energy buffering role at system level
 - Ripple current awareness
 - Interaction with inverter switching behaviour
@@ -102,7 +102,7 @@ All Phase 2 power-stage-related documents are expected to:
 
 This framework provides a **common reference point** for:
 - Semiconductor technology discussion
-- DC bus design methodology
+- DC-link energy buffering methodology  
 - Switching behaviour reasoning
 - Protection and state-machine concepts
 
