@@ -357,3 +357,23 @@ Such activities are deferred to Phase 3 and beyond, where sufficient modelling a
 This document establishes a **clear system-level reasoning framework** for semiconductor technology, dv/dt awareness, and DC-link-related system assumptions within the power-stage baseline.
 
 By articulating how these factors influence engineering trade-offs—without committing to numerical or implementation detail—it supports disciplined and traceable design evolution in later phases.
+
+---
+
+## 11. Validation Artefacts (Planned)
+
+The system-level design judgements and trade-off reasoning documented in this Phase-2 document are intentionally qualitative and abstraction-bound.
+
+The following artefacts are **intentionally deferred to Phase 3–4** and will be used to validate and substantiate the reasoning established here:
+
+- Switching-level simulation waveforms, used to observe dv/dt behaviour,
+  current ripple trends, and qualitative switching loss tendencies
+- Discrete-time inverter models, used to study interaction between inverter
+  dynamics and control assumptions
+- DC-link stress envelopes under representative operating conditions,
+  used to assess the validity of energy buffering and decoupling assumptions
+- Experimental bring-up and debugging notes, used to confirm practical
+  feasibility of the assumed operating domains
+
+These artefacts are **not required for Phase 2**, and their absence does not invalidate the system-level reasoning presented in this document.  
+Instead, they provide **quantitative and experimental anchors** for validating the Phase-2 design judgements in subsequent phases.
