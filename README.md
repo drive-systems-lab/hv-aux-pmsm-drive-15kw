@@ -7,10 +7,11 @@ The target applications are auxiliary loads such as oil pumps and coolant pumps,
 The repository is organised as an engineering portfolio project, structured to demonstrate end-to-end drive-system engineering.  
 The full engineering scope spans system specification, architecture design, power-stage reasoning, modelling strategy, control design, simulation workflow, testing and debugging methodology, and engineering documentation, developed across phased project execution.
 
-> **Phase snapshot: Phase 1 complete**  
-> Phase 1 establishes and freezes the system-level definition, functional architecture, and control-boundary design.  
-> Parameters at this stage are architectural anchors and structural placeholders, rather than performance commitments.  
-> Detailed power-stage design, implementation-level control, and validation are deferred to subsequent phases.
+> **Phase snapshot: Phase 1 complete · Phase 2 complete (reasoning consolidated)**  
+>
+> **Phase 1** establishes and freezes the system-level definition, functional architecture, and control-boundary design. Parameters at this stage are architectural anchors and structural placeholders, rather than performance commitments. 
+>
+> **Phase 2** establishes the system-level power-stage reasoning baseline, consolidating architectural and behavioural judgements while intentionally remaining non-implementation-ready. Numerical design, detailed modelling, and validation activities are explicitly deferred to subsequent phases.
 
 All numerical parameters and models are illustrative and intended for demonstration rather than deployment.  
 The system parameters and models represent a generalized abstraction inspired by typical high-voltage auxiliary drive architectures, and do not correspond to any specific commercial product.
@@ -114,13 +115,16 @@ The project follows a four-phase development timeline aligned with typical autom
 * Establish repository structure  
 * Draft initial models and documentation framework  
 
-### Phase 2 — Power Stage Design (Jan 2026)
+### Phase 2 — Power Stage Design (Reasoning Level) (Jan 2026)
 
 * Semiconductor and topology reasoning  
 * Switching-frequency justification  
 * DC-link behaviour analysis  
 * Protection and state-machine concepts  
 * Preliminary thermal/EMI considerations  
+
+> Phase 2 focuses exclusively on **system-level design judgement and reasoning**.  
+> No numerical optimisation, component sizing, detailed modelling, or implementation-level decisions are performed in this phase.
 
 ### Phase 3 — Modelling & Simulation (Feb 2026)
 
@@ -142,9 +146,10 @@ This plan may evolve as refinements or additional demonstrations are added, whil
 
 # 5. Project Status
 
-Current phase: Phase 1 — completed
+Current phase: **Phase 2 — completed (reasoning consolidated)**
 
-Phase 1 establishes and freezes the system-level definition, functional architecture, control boundary assumptions, and documentation baseline that subsequent phases will build upon.
+Phase 2 establishes the consolidated **system-level power-stage reasoning baseline** that subsequent modelling and implementation phases will build upon.  
+All Phase 2 outputs remain intentionally **non-implementation-ready**.
 
 Future updates will extend the repository in accordance with the defined development phases.
 
