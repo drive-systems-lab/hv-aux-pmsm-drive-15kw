@@ -123,9 +123,6 @@ The project follows a four-phase development timeline aligned with typical autom
 * Protection and state-machine concepts  
 * Preliminary thermal/EMI considerations  
 
-> Phase 2 focuses exclusively on **system-level design judgement and reasoning**.  
-> No numerical optimisation, component sizing, detailed modelling, or implementation-level decisions are performed in this phase.
-
 ### Phase 3 — Modelling & Simulation (Feb 2026)
 
 * Develop switching, system-level and control-oriented models  
