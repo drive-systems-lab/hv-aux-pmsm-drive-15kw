@@ -7,7 +7,7 @@ All reasoning in this document is based on the **baseline reference configuratio
 
 Numerical design, component selection, detailed modelling, and implementation-level decisions are explicitly deferred to later phases.
 
-> **Status Snapshot (Phase 2 — Reasoning Consolidated; Integration & Hygiene Pending)**  
+> **Status Snapshot (Phase 2 — Reasoning Baseline Consolidated; Documentation Integration & Hygiene Pending)**  
 >  
 > This document consolidates the **system-level power-stage reasoning** developed during Phase 2.  
 > The content remains strictly within the Phase-2 abstraction level and is subject only to integration and hygiene refinements (wording, cross-referencing, and scope clarification), not new technical additions.
@@ -335,7 +335,9 @@ The considerations described above directly inform, but do not determine:
 - DC-link behaviour and ripple characteristics  
 - Protection philosophy and fault response strategy  
 
-These topics are addressed in subsequent sections and documents, where detailed **design reasoning** is developed based on the awareness established here.
+These topics are addressed in subsequent sections and documents, where detailed **design reasoning** is developed based on the awareness established here.  
+
+> The considerations above define the Phase-2 reasoning baseline and its validity boundaries, rather than selected solutions or design outcomes.
 
 ---
 

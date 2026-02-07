@@ -15,7 +15,7 @@ The scope of Phase 2 includes:
 - Definition and justification of the **overall inverter power stage topology** consistent with the Phase 1 system architecture baseline.
 - **Semiconductor technology selection at category level**, such as SiC MOSFET, IGBT, or hybrid approaches, including high-level trade-off considerations.
 - Discussion of **switching frequency range**, dv/dt implications, and associated system-level risks (e.g. insulation stress, EMI awareness), without numerical optimisation.
-- **DC-link capacitor design methodology**, including ripple current considerations and design reasoning, without final component sizing.
+- **DC-link capacitor design methodology**, including qualitative ripple current awareness and system-level design reasoning, without component sizing or quantitative evaluation.
 - Definition of **power-stage-related protection concepts**, including fault categories and high-level protection philosophy.
 - Definition of the **operational state machine structure** *(conceptual structure only; not executable logic)* relevant to power stage enable, fault handling, and safe-state transitions.
 
