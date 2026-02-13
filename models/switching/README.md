@@ -39,6 +39,31 @@ Model execution is not required in this freeze stage.
 
 ---
 
+## Day 2 — Switching Behaviour
+
+### Scope
+
+At this stage, switching activity is enabled through a basic carrier-based SPWM implementation.
+
+The focus remains on execution stability and behavioural visibility.
+
+- Carrier-based SPWM
+- Complementary bottom-switch logic
+- Relay hysteresis for numerical stability (not dead-time)
+- Stable executable switching model
+- Basic waveform visibility
+
+### Out of Scope
+
+- Dead-time modelling
+- Modulation enhancement
+- Performance optimisation
+- Closed-loop control
+- Dynamic scenario testing
+- Non-ideal semiconductor modelling
+
+---
+
 ## Model File Governance
 
 - `inverter_switching_model.slx`  
