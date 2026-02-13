@@ -3,6 +3,7 @@
 *.slxc
 *.slx.autosave
 *.mdl.autosave
+slprj/
 
 # VS Code settings
 .vscode/
