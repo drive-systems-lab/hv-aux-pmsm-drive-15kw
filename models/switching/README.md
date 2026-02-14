@@ -64,6 +64,40 @@ The focus remains on execution stability and behavioural visibility.
 
 ---
 
+## Day 3 — Switching Dynamic Scenarios
+
+### Scope
+
+At this stage, minimal excitation scenarios are introduced to validate switching-level behavioural consistency, without modifying the power-stage structure.
+
+The objective is behavioural coverage, not performance evaluation.
+
+### Implemented Scenario Set
+
+- **Scenario A — PWM Enable Step**  
+  Validates gating activation/deactivation behaviour and DC-link interaction consistency.
+
+- **Scenario B — Modulation Index Step**  
+  Verifies switching response sensitivity to modulation index step changes.
+
+- **Scenario C — Load Command (Reserved Placeholder)**  
+  Structural excitation path prepared for future load disturbance studies.  
+  The current R-L load remains fixed in this stage.
+
+### Design Discipline
+
+The following constraints are intentionally maintained:
+
+- No power-path restructuring
+- No dead-time modelling
+- No control-loop integration
+- No plant parameter switching
+- No performance optimisation
+
+Scenarios serve excitation coverage at switching resolution only.
+
+---
+
 ## Model File Governance
 
 - `inverter_switching_model.slx`  
