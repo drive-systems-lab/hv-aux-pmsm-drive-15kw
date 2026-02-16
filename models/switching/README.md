@@ -98,6 +98,23 @@ Scenarios serve excitation coverage at switching resolution only.
 
 ---
 
+## Day 5 — Baseline Consolidation & Freeze
+
+Following behavioural validation under Scenario A, the switching-level baseline is consolidated and frozen under the following reproducible configuration:
+
+- Discrete fixed-step solver (Ts = 1e-6 s)
+- Discrete powergui (SPS environment)
+- Carrier-based SPWM modulation strategy
+- Relay-based gating decision (numerical hysteresis only, not dead-time)
+- Parameters centralised in Model Workspace
+- No modification to inverter power-path topology
+
+This configuration defines the numerical and structural reference point for subsequent Phase 3 development.
+
+Further behavioural exploration will extend from this frozen baseline without altering its architectural definition.
+
+---
+
 ## Model File Governance
 
 - `inverter_switching_model.slx`  
