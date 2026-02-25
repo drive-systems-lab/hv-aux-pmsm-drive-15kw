@@ -45,3 +45,11 @@ This model represents an abstraction layer only and should not be interpreted as
 - `pmsm_discrete_variant_*.slx`  
   Variant models created for exploratory or non-ideal studies.  
   These do not replace the mainline model.
+
+---
+
+## Cross-Phase Traceability
+
+For structured cross-phase traceability between Phase-2 engineering judgement and Phase-3 executable artefacts, see:
+
+`docs/validation_mapping.md`.

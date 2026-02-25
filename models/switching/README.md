@@ -123,3 +123,11 @@ Further behavioural exploration will extend from this frozen baseline without al
 - `inverter_switching_variant_*.slx`  
   Variant models created for specific non-ideal or exploratory studies.  
   These do not replace the mainline model.
+
+---
+
+## Cross-Phase Traceability
+
+For structured cross-phase traceability between Phase-2 engineering judgement and Phase-3 executable artefacts, see:
+
+`docs/validation_mapping.md`.

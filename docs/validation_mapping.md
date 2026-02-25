@@ -37,7 +37,7 @@ The table below establishes structural coverage between the validation artefacts
 |----------------------------|-----------------------------|-----------------|---------------|
 | Switching-level simulation waveforms | `models/switching/inverter_switching_model.slx` | Structurally supported | R–L placeholder only; no motor dynamics |
 | Discrete-time inverter models | `models/discrete/pmsm_discrete_model.slx` | Structurally supported | dq frame only; mechanical domain excluded |
-| DC-link stress envelope awareness | `models/switching/inverter_switching_model.slx` | Observationally enabled | No quantitative ripple envelope established |
+| DC-link stress envelope awareness | `models/switching/inverter_switching_model.slx` | Structurally observable | No quantitative ripple envelope established |
 | Experimental bring-up notes | — | Deferred beyond Phase 3 | Hardware validation intentionally outside Phase-3 scope |
 
 No optimisation, numerical convergence study, or quantitative performance validation is implied.
