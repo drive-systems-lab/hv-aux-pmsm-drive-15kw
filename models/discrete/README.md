@@ -37,6 +37,22 @@ This model represents an abstraction layer only and should not be interpreted as
 
 ---
 
+## Execution Guidance
+
+This model represents a discrete-time dq electrical abstraction layer for structural state-update execution.
+
+Baseline execution uses the constant-source inputs via the source selectors for structural visibility only.
+
+The discrete step time `Ts` is governed in the Model Workspace.
+
+Mechanical dynamics and control-loop interaction remain outside the defined modelling scope.
+
+This artefact establishes structural state-update behaviour only and does not imply unified plant modelling, optimisation, or quantitative performance validation.
+
+Tested with MATLAB R2023b (Simulink).
+
+---
+
 ## Model File Governance
 
 - `pmsm_discrete_model.slx`  

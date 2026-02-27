@@ -115,6 +115,21 @@ Further behavioural exploration will extend from this frozen baseline without al
 
 ---
 
+## Quick Run Guidance
+
+The baseline configuration defaults to Scenario ID `3` (reserved placeholder).
+
+To observe switching behaviour, select:
+
+- `1` — PWM enable step  
+- `2` — Modulation index step  
+
+No optimisation, unified plant modelling, or quantitative performance validation is implied.
+
+Tested with MATLAB R2023b (Simulink).
+
+---
+
 ## Model File Governance
 
 - `inverter_switching_model.slx`  
