@@ -7,11 +7,13 @@ The target applications are auxiliary loads such as oil pumps and coolant pumps,
 The repository is organised as an engineering portfolio project, structured to demonstrate end-to-end drive-system engineering.  
 The full engineering scope spans system specification, architecture design, power-stage reasoning, modelling strategy, control design, simulation workflow, testing and debugging methodology, and engineering documentation, developed across phased project execution.
 
-> **Phase snapshot: Phase 1 complete · Phase 2 complete (reasoning baseline consolidated)**  
+> **Phase snapshot: Phase 1 complete · Phase 2 complete · Phase 3 complete (modelling baseline established)**  
 >
 > **Phase 1** establishes and freezes the system-level definition, functional architecture, and control-boundary design. Parameters at this stage are architectural anchors and structural placeholders, rather than performance commitments. 
 >
 > **Phase 2** establishes the system-level power-stage reasoning baseline, consolidating architectural and behavioural judgements while intentionally remaining non-implementation-ready. Numerical design, detailed modelling, and validation activities are explicitly deferred to subsequent phases.
+>
+> **Phase 3** establishes executable modelling artefacts at switching and discrete abstraction layers. Structural traceability to Phase-2 engineering judgement has been consolidated through alignment and validation mapping documentation. No optimisation or implementation commitments are introduced at this stage.  
 
 All numerical parameters and models are illustrative and intended for demonstration rather than deployment.  
 The system parameters and models represent a generalized abstraction inspired by typical high-voltage auxiliary drive architectures, and do not correspond to any specific commercial product.
@@ -123,11 +125,13 @@ The project follows a four-phase development timeline aligned with typical autom
 * Protection and state-machine concepts  
 * Preliminary thermal/EMI considerations  
 
-### Phase 3 — Modelling & Simulation (Feb 2026)
+### Phase 3 — Modelling & Structural Validation (Feb 2026)
 
-* Develop switching, system-level and control-oriented models  
-* Compare behaviour across modelling levels  
-* Build validation workflow for tuning and performance checks  
+* Establish switching-level executable inverter model  
+* Establish discrete-time PMSM dq electrical model  
+* Clarify abstraction-layer alignment  
+* Consolidate structured validation mapping between Phase-2 reasoning and Phase-3 artefacts  
+* Freeze modelling baseline without optimisation or implementation commitments
 
 ### Phase 4 — Control, Debugging & Release v1.0 (Mar 2026)
 
@@ -143,10 +147,10 @@ This plan may evolve as refinements or additional demonstrations are added, whil
 
 # 5. Project Status
 
-Current phase: **Phase 2 — completed (reasoning consolidated)**
+Current phase: **Phase 3 — completed (modelling baseline established)**
 
-Phase 2 establishes the consolidated **system-level power-stage reasoning baseline** that subsequent modelling and implementation phases will build upon.  
-All Phase 2 outputs remain intentionally **non-implementation-ready**.
+Phase 3 establishes executable artefacts at defined abstraction layers and consolidates cross-phase traceability while maintaining strict scope discipline.  
+All Phase 3 outputs remain intentionally **non-optimised and non-implementation-ready**.
 
 Future updates will extend the repository in accordance with the defined development phases.
 

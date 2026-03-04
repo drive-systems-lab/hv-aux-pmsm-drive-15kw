@@ -141,8 +141,8 @@ Tested with MATLAB R2023b (Simulink).
 
 ---
 
-## Cross-Phase Traceability
+### Related documentation
 
-For structured cross-phase traceability between Phase-2 engineering judgement and Phase-3 executable artefacts, see:
+For structured cross-phase traceability between Phase-2 engineering judgement and Phase-3 modelling artefacts, see:
 
 `docs/validation_mapping.md`.

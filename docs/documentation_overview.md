@@ -32,7 +32,7 @@ Inverter power-stage design reasoning and trade-off documentation.
 
 ---
 
-## Switching Simulation and Discrete Modelling (Phase 3)
+## Modelling & Structural Validation (Phase 3)
 
 Switching simulation, discrete modelling, abstraction-layer alignment, and traceability documentation.
 
