@@ -7,7 +7,7 @@ This document establishes the control–plant interpretation baseline for Phase 
 Its purpose is to define how the closed-loop current-control path introduced in Phase 4 relates to the executable plant foundation established in Phase 3.
 
 This document does **not** introduce controller implementation, optimisation activity, or integration finalisation.  
-Its role is to provide a stable interpretive reference for subsequent Phase-4 work, so that later control-path and integration artefacts remain structurally consistent with the frozen modelling basis inherited from Phase 3.
+Its role is to provide a stable interpretive reference for subsequent Phase-4 work by defining the control–plant relationship, principal signal interfaces, and coordinate-system context required for later control-path and integration artefacts to remain structurally consistent with the frozen modelling basis inherited from Phase 3.
 
 ---
 
@@ -19,7 +19,7 @@ The control-oriented structural view adopted for Phase 4 is:
 
 This expression defines the intended closed-loop interpretation boundary for Phase 4.
 
-At this stage, it should be understood as a **structural and modelling reference**, rather than as a statement that the full closed-loop assembly has already been formally established as an executable baseline.
+At this stage, it should be understood as a **structural and modelling reference** rather than as a claim of executable closed-loop baseline completion.
 
 ---
 
@@ -49,8 +49,90 @@ Within the Phase-4 interpretation, the control path and plant foundation are rel
 - the **PMSM electrical plant** represents the electrical response layer inherited from the Phase-3 discrete PMSM baseline
 - the **current feedback** closes the electrical current-control loop at the interpretation level adopted for Phase 4
 
-This relationship is introduced here as a modelling baseline only.  
-Its purpose is to clarify how later Phase-4 execution work should be interpreted, not to claim that all closed-loop artefacts have already been completed in final form.
+This relationship is introduced here as a modelling baseline for later Phase-4 interpretation and execution work.  
+It does not imply final closed-loop artefact completion.
+
+---
+
+## Control–Plant Signal Interfaces
+
+To support a consistent Phase-4 interpretation, the principal control–plant signal interfaces are defined as follows.
+
+### Reference-side signals
+
+- `id_ref`  
+  dq-axis direct-current reference used to express the control-side electrical target along the d axis.
+
+- `iq_ref`  
+  dq-axis quadrature-current reference used to express the control-side electrical target along the q axis.
+
+These quantities define the intended current-reference input to the current-control path adopted in Phase 4.
+
+### Control-side internal signals
+
+- `vd_ref`  
+  dq-axis direct-voltage reference produced by the current-control layer as the control-side voltage command along the d axis.
+
+- `vq_ref`  
+  dq-axis quadrature-voltage reference produced by the current-control layer as the control-side voltage command along the q axis.
+
+These quantities represent the principal control-side voltage commands passed toward the modulation-side path.  
+At this stage, they are documented as interpretation-level interface quantities within the Phase-4 modelling baseline.
+
+### Feedback-side signals
+
+- `id_feedback`  
+  dq-axis direct-current feedback quantity used to represent the plant-side current state returned to the control path.
+
+- `iq_feedback`  
+  dq-axis quadrature-current feedback quantity used to represent the plant-side current state returned to the control path.
+
+Within the Phase-4 interpretation, these feedback quantities close the current-control loop at the electrical level only.
+
+Taken together, the principal signal relationship can be interpreted as:
+
+`(id_ref, iq_ref) → current-control decision layer → (vd_ref, vq_ref) → modulation-side path → inverter stage → PMSM electrical plant → (id_feedback, iq_feedback)`
+
+This expression defines the signal-interface interpretation adopted for Phase 4.  
+It should be understood as a modelling baseline only, not as a claim of final integrated closed-loop completion.
+
+---
+
+## Coordinate-System Relationship
+
+The control-oriented signal path in Phase 4 is interpreted across both three-phase and dq-coordinate representations.
+
+### abc → dq feedback interpretation path
+
+The inverter-stage and plant-side electrical behaviour ultimately exists in three-phase form at the interface between the switching inverter stage and the motor-side electrical system.
+
+Within the Phase-4 control interpretation, this three-phase electrical behaviour is understood to be mapped into the dq frame in order to express the feedback quantities required by the current-control path.
+
+Accordingly:
+
+- the switching-stage current observation exists at the three-phase interface level
+- the feedback path is interpreted through an `abc → dq` transformation context
+- `id_feedback` and `iq_feedback` represent the control-facing dq expression of the plant-side electrical current state
+
+This transformation path is documented here as a coordinate-system interpretation boundary for the feedback side.
+
+### dq → abc modulation-side path
+
+The current-control path in Phase 4 is expressed primarily in dq coordinates.
+
+Within this interpretation:
+
+- `vd_ref` and `vq_ref` represent dq-axis voltage-reference quantities generated by the control side
+- these dq-axis voltage-reference quantities are understood to pass through a `dq → abc` modulation-side path
+- the modulation interface then provides the switching-facing signal route toward the inverter stage inherited from the frozen Phase-3 switching baseline
+
+This path defines how control-side dq quantities are related to the inverter-stage switching interface at the modelling level adopted for Phase 4.
+
+### Interpretation boundary
+
+The coordinate-system relationship documented here serves an interpretive purpose only.
+
+Its role is to clarify how control-facing dq-domain quantities relate to the three-phase inverter-stage and plant-side electrical representation inherited from Phase 3, without introducing implementation or validation claims.
 
 ---
 
