@@ -48,17 +48,30 @@ The present current-step case uses the following controller working values, adop
 
 ![Current Step Response — Main View](../images/behaviour/current_step_main.png)
 
-The main view is used to assess whether `i_q_fb` follows `i_q_ref` in a readable and bounded manner under the present closed-loop baseline.
+The main view provides the full-window overview of the present current-step case and is used to assess whether `i_q_fb` follows `i_q_ref` in a readable and bounded manner on the frozen Phase-4 closed-loop baseline.
 
-At the present stage, the emphasis is placed on qualitative tracking readability and bounded response formation, rather than tuned dynamic-performance validation.
+At the present stage, readable tracking is interpreted qualitatively through observable response direction, bounded response development, and interpretable approach toward the commanded current level, rather than through tuned ripple suppression or optimised dynamic-performance closure.
+
+
+### Transient View
+
+![Current Step Response — Transient View](../images/behaviour/current_step_transient.png)
+
+The transient view complements the main overview by examining the local response formation around the applied `i_q_ref` step.
+
+Within the present behavioural-observation boundary, this figure is used to improve visibility of the step-response development, including response onset, approach toward the commanded level, and overall transient readability on the frozen closed-loop baseline.
+
+A locally stepped or ripple-like response appearance is visible in the present transient view. At the current stage, this appearance is retained as part of the observable closed-loop behaviour and does not prevent qualitative interpretation of response direction, bounded transient formation, or interpretable approach toward the commanded current level. It is not interpreted here as a switching-device-level or implementation-level conclusion.
+
+The present view is intended to support qualitative transient interpretation only, rather than to claim tuned settling performance, optimised controller quality, or final implementation-level dynamic behaviour.
 
 ### Supporting View
 
 ![Current Step Response — Supporting View](../images/behaviour/current_step_aux.png)
 
-The supporting view is used to complement the main current-tracking figure by observing:
+The supporting view complements the main and transient views by observing:
 
 - limited and interpretable d-axis response through `i_d_fb`
 - control-side command behaviour through `v_d_ref` and `v_q_ref`
 
-This supporting material is intended to improve behavioural interpretability of the current-step case, rather than to claim complete decoupling or tuned controller quality.
+This supporting material is intended to improve cross-axis and control-side interpretability of the present current-step case, rather than to claim complete decoupling, tuned controller quality, or implementation-facing control maturity.
