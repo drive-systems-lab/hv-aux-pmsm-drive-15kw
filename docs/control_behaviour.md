@@ -111,13 +111,68 @@ Accordingly, the present figure is used primarily to show that:
 
 The supporting view complements the main view by observing:
 
-- d-axis current behaviour through `i_d_fb`
+- limited cross-axis response through `i_d_fb`
 - controller-side command adjustment through `v_d_ref` and `v_q_ref`
 
 In the present case, the more direct evidence of disturbance handling is observed on the controller side rather than through a large visible excursion in `i_q_fb`.
 
 The supporting view is therefore used to show that:
 
-- `i_d_fb` remains limited and interpretable under the applied operating-condition perturbation
+- `i_d_fb` exhibits only limited and interpretable cross-axis response under the applied operating-condition perturbation
 - `v_q_ref` and `v_d_ref` exhibit coherent controller-side reaction following the disturbance
 - the retained current regulation seen in the main view is supported by readable control-side adjustment within the present electrical-only modelling boundary
+
+---
+
+## DC-Link Disturbance
+
+### Case Setup
+
+For the present DC-link-disturbance case, the working setup is based on:
+
+- `i_d_ref = 0 A`
+- `i_q_ref = 10 A`
+- `omega_e_input = 300 rad/s`
+- `Ts_ctrl = 1 / 5000 s`
+- `f_sw = 5 kHz`
+
+In the present case, bounded DC-link variation was introduced within the existing inverter-side source/DC-link context on the frozen Phase-4 closed-loop baseline while the current-reference operating point was held constant.
+
+For the present behaviour-exploration case, the source/DC-link-side working settings were adjusted as follows:
+
+- Equivalent Source Impedance: from `0.01 ohm` to `0.2 ohm + 1 mH`
+- DC-Link Capacitor: from `1 mF` to `10 uF`
+
+Within the present Phase-4 interpretation boundary, these settings are used only as scenario-conditioning values to establish a bounded and readable DC-link-disturbance case.
+
+The purpose of the present case is not to establish a broader DC-source dynamics study, DC-bus design optimisation exercise, or robustness-margin conclusion. Instead, it is used to examine whether the frozen closed-loop baseline retains readable and bounded current regulation under bounded DC-link variation, and whether the associated control-side command behaviour remains interpretable within the present modelling boundary.
+
+### Main View
+
+![DC-Link Disturbance — Main View](../images/behaviour/dc_link_disturbance_main.png)
+
+The main view records the bounded `u_dc` variation together with the resulting `i_q_fb` behaviour on the frozen Phase-4 closed-loop baseline.
+
+In the present case, the applied source/DC-link-side conditioning produces clearly visible DC-link variation while `i_q_fb` remains bounded and readable around the established current-reference operating point.
+
+Accordingly, the present figure is used primarily to show that:
+
+- bounded DC-link variation is clearly introduced
+- `i_q_fb` remains bounded and readable on the frozen closed-loop baseline
+- the closed-loop baseline retains interpretable current regulation within the adopted electrical current-control Phase-4 boundary
+
+### Supporting View
+
+![DC-Link Disturbance — Supporting View](../images/behaviour/dc_link_disturbance_aux.png)
+
+The supporting view complements the main view by observing:
+
+- control-side command behaviour through `v_d_ref` and `v_q_ref`
+
+In the present case, the more direct supporting evidence for DC-link-disturbance interpretation is observed on the command side rather than through a large breakdown of current regulation.
+
+The supporting view is therefore used to show that:
+
+- `v_q_ref` and `v_d_ref` remain readable under the applied bounded DC-link variation
+- control-side command behaviour remains interpretable within the present electrical current-control context
+- the retained current regulation seen in the main view is supported by readable command-side adjustment within the existing Phase-4 modelling boundary
