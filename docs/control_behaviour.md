@@ -16,6 +16,13 @@ At the present stage, selected simulation-facing working settings may be adopted
 
 Such settings should be understood as behaviour-exploration working conditions used for structural closed-loop assessment, rather than final target-machine datasheet confirmation, implementation-level commitments, or tuned-performance outcomes.
 
+The present behavioural cases are observed using the following shared controller working values, adopted here as behaviour-exploration settings rather than tuned-performance outcomes:
+
+- `Kp_id = 5`
+- `Ki_id = 100`
+- `Kp_iq = 5`
+- `Ki_iq = 100`
+
 Where needed, case-specific operating conditions and excitation settings are stated locally within each behaviour section.
 
 ---
@@ -26,23 +33,15 @@ Where needed, case-specific operating conditions and excitation settings are sta
 
 For the present current-step case, the working setup is based on:
 
-- `omega_e_input = 300 rad/s`
+- `i_d_ref = 0 A`
 - `i_q_ref` step excitation from `0 A` to `10 A`
+- `omega_e_input = 300 rad/s`
 - `Ts_ctrl = 1 / 5000 s`
 - `f_sw = 5 kHz`
 
-A bounded `i_q_ref` step was applied on the frozen Phase-4 closed-loop baseline while `i_d_ref` was held at zero and `omega_e_input` was kept constant.
+A bounded `i_q_ref` step was applied on the frozen Phase-4 closed-loop baseline while `i_d_ref` and `omega_e_input` were held unchanged.
 
-The purpose of the present case is to establish an initial readable current-step behavioural view for the closed-loop baseline and to assess whether the resulting response remains bounded and interpretable under the present excitation. At the present stage, the case is used to support qualitative behavioural observation of the frozen baseline, rather than controller-optimisation closure or final dynamic-performance judgement.
-
-### Working Parameters
-
-The present current-step case uses the following controller working values, adopted here as behaviour-exploration settings rather than tuned-performance outcomes:
-
-- `Kp_id = 5`
-- `Ki_id = 100`
-- `Kp_iq = 5`
-- `Ki_iq = 100`
+The purpose of the present case is to establish an initial readable current-step behavioural view for the closed-loop baseline and to assess whether the resulting response remains bounded and interpretable under the present excitation. 
 
 ### Main View
 
@@ -50,7 +49,12 @@ The present current-step case uses the following controller working values, adop
 
 The main view provides the full-window overview of the present current-step case and is used to assess whether `i_q_fb` follows `i_q_ref` in a readable and bounded manner on the frozen Phase-4 closed-loop baseline.
 
-At the present stage, readable tracking is interpreted qualitatively through observable response direction, bounded response development, and interpretable approach toward the commanded current level.
+Accordingly, the present figure is used primarily to show that:
+
+- overall current-tracking formation is clearly visible over the full observation window
+- `i_q_fb` remains bounded following the applied `i_q_ref` step
+- readable tracking is interpreted qualitatively through observable response direction, bounded response development, and interpretable approach toward the commanded current level
+
 
 ### Transient View
 
@@ -58,7 +62,11 @@ At the present stage, readable tracking is interpreted qualitatively through obs
 
 The transient view complements the main overview by examining the local response formation around the applied `i_q_ref` step.
 
-Within the present behavioural-observation boundary, this figure is used to improve visibility of the step-response development, including response onset, approach toward the commanded level, and overall transient readability on the frozen closed-loop baseline.
+Accordingly, the present figure is used primarily to show that:
+
+- response onset is more clearly visible around the applied step
+- local step-response development toward the commanded current level can be examined in improved detail
+- transient-response behaviour remains interpretable on the frozen closed-loop baseline
 
 ### Supporting View
 
@@ -66,10 +74,14 @@ Within the present behavioural-observation boundary, this figure is used to impr
 
 The supporting view complements the main and transient views by observing:
 
-- limited and interpretable d-axis response under the applied q-axis step through `i_d_fb`
-- control-side response through `v_d_ref` and `v_q_ref`
+- limited cross-axis interaction through `i_d_fb`
+- controller-side command behaviour through `v_d_ref` and `v_q_ref`
 
-This supporting material is intended to improve cross-axis and control-side interpretability of the present current-step case.
+The present figure is therefore used to show that:
+
+- cross-axis behaviour remains limited and readable under the applied q-axis step
+- `v_d_ref` and `v_q_ref` provide interpretable controller-side command response during current-step establishment
+- the current-tracking behaviour seen in the main and transient views is accompanied by readable supporting behaviour on the d-axis and command side within the present closed-loop context
 
 ---
 
@@ -85,11 +97,12 @@ For the present load-disturbance case, the working setup is based on:
 - `Ts_ctrl = 1 / 5000 s`
 - `f_sw = 5 kHz`
 
-In the present case, a bounded perturbation was applied to `omega_e_input` on the frozen Phase-4 closed-loop baseline while the current-reference operating point was held constant.
+In the present case, a bounded perturbation was applied to `omega_e_input` on the frozen Phase-4 closed-loop baseline while the current-reference operating point was held unchanged.
 
-Within the present Phase-4 interpretation boundary, this perturbation is used as a representative operating-condition disturbance and as a load-side surrogate within the existing electrical-only closed-loop context.
+Within the present Phase-4 interpretation boundary, this case is used as a representative operating-condition disturbance and as a load-side surrogate within the existing electrical-only closed-loop context.
 
-The purpose of the present case is not to establish a full mechanical-load validation or a broader electro-mechanical disturbance study. Instead, it is used to examine whether the frozen closed-loop baseline retains readable and bounded current regulation under the applied operating-condition change, and whether the associated controller-side reaction remains interpretable within the present modelling boundary.
+The purpose of the present case is to observe whether the frozen closed-loop baseline retains readable and bounded current regulation under the applied operating-condition perturbation, and whether the associated controller-side reaction remains interpretable within the present modelling boundary.
+
 
 ### Main View
 
@@ -97,12 +110,12 @@ The purpose of the present case is not to establish a full mechanical-load valid
 
 The main view records the applied `omega_e_input` perturbation together with the resulting `i_q_fb` behaviour on the frozen Phase-4 closed-loop baseline.
 
-In the present case, the applied operating-condition disturbance does not produce a large visible deviation in `i_q_fb`. Within the present current-control context, this is interpreted as an indication that the closed-loop baseline retains bounded and readable current regulation under the tested perturbation condition.
+In the present case, the applied operating-condition perturbation introduces only limited visible excursion in `i_q_fb`, while bounded and readable current regulation is retained on the frozen Phase-4 closed-loop baseline.
 
 Accordingly, the present figure is used primarily to show that:
 
-- a representative operating-condition disturbance is clearly introduced
-- `i_q_fb` remains bounded and readable on the frozen closed-loop baseline
+- a representative operating-condition perturbation is clearly introduced
+- `i_q_fb` remains bounded and readable under the applied disturbance
 - the closed-loop baseline retains interpretable current regulation within the adopted electrical-only Phase-4 boundary
 
 ### Supporting View
@@ -111,16 +124,16 @@ Accordingly, the present figure is used primarily to show that:
 
 The supporting view complements the main view by observing:
 
-- limited cross-axis response through `i_d_fb`
-- controller-side command adjustment through `v_d_ref` and `v_q_ref`
+- limited cross-axis interaction through `i_d_fb`
+- controller-side command behaviour through `v_d_ref` and `v_q_ref`
 
 In the present case, the more direct evidence of disturbance handling is observed on the controller side rather than through a large visible excursion in `i_q_fb`.
 
 The supporting view is therefore used to show that:
 
-- `i_d_fb` exhibits only limited and interpretable cross-axis response under the applied operating-condition perturbation
-- `v_q_ref` and `v_d_ref` exhibit coherent controller-side reaction following the disturbance
-- the retained current regulation seen in the main view is supported by readable control-side adjustment within the present electrical-only modelling boundary
+- `i_d_fb` exhibits only limited and interpretable cross-axis interaction under the applied operating-condition perturbation
+- `v_d_ref` and `v_q_ref` exhibit coherent controller-side reaction following the perturbation
+- the retained current regulation seen in the main view is accompanied by readable controller-side adjustment within the present electrical-only modelling boundary
 
 ---
 
@@ -136,7 +149,7 @@ For the present DC-link-disturbance case, the working setup is based on:
 - `Ts_ctrl = 1 / 5000 s`
 - `f_sw = 5 kHz`
 
-In the present case, bounded DC-link variation was introduced within the existing inverter-side source/DC-link context on the frozen Phase-4 closed-loop baseline while the current-reference operating point was held constant.
+In the present case, bounded DC-link variation was introduced within the existing inverter-side source/DC-link context on the frozen Phase-4 closed-loop baseline while the current-reference operating point was held unchanged.
 
 For the present behaviour-exploration case, the source/DC-link-side working settings were adjusted as follows:
 
@@ -145,7 +158,7 @@ For the present behaviour-exploration case, the source/DC-link-side working sett
 
 Within the present Phase-4 interpretation boundary, these settings are used only as scenario-conditioning values to establish a bounded and readable DC-link-disturbance case.
 
-The purpose of the present case is not to establish a broader DC-source dynamics study, DC-bus design optimisation exercise, or robustness-margin conclusion. Instead, it is used to examine whether the frozen closed-loop baseline retains readable and bounded current regulation under bounded DC-link variation, and whether the associated control-side command behaviour remains interpretable within the present modelling boundary.
+The purpose of the present case is to observe whether the frozen closed-loop baseline retains readable and bounded current regulation under bounded DC-link variation, and whether the associated command-side behaviour remains interpretable within the present electrical current-control boundary, rather than to establish a broader DC-source dynamics study, DC-bus design optimisation exercise, or robustness-margin conclusion.
 
 ### Main View
 
@@ -158,8 +171,8 @@ In the present case, the applied source/DC-link-side conditioning produces clear
 Accordingly, the present figure is used primarily to show that:
 
 - bounded DC-link variation is clearly introduced
-- `i_q_fb` remains bounded and readable on the frozen closed-loop baseline
-- the closed-loop baseline retains interpretable current regulation within the adopted electrical current-control Phase-4 boundary
+- `i_q_fb` remains bounded and readable under the applied source-side variation
+- the closed-loop baseline retains interpretable current regulation within the adopted Phase-4 electrical current-control boundary
 
 ### Supporting View
 
@@ -167,12 +180,12 @@ Accordingly, the present figure is used primarily to show that:
 
 The supporting view complements the main view by observing:
 
-- control-side command behaviour through `v_d_ref` and `v_q_ref`
+- controller-side command behaviour through `v_d_ref` and `v_q_ref`
 
-In the present case, the more direct supporting evidence for DC-link-disturbance interpretation is observed on the command side rather than through a large breakdown of current regulation.
+In the present case, the more direct supporting evidence for DC-link-disturbance interpretation is observed on the controller side rather than through a large breakdown of current regulation.
 
 The supporting view is therefore used to show that:
 
-- `v_q_ref` and `v_d_ref` remain readable under the applied bounded DC-link variation
-- control-side command behaviour remains interpretable within the present electrical current-control context
-- the retained current regulation seen in the main view is supported by readable command-side adjustment within the existing Phase-4 modelling boundary
+- `v_d_ref` and `v_q_ref` remain readable and interpretable under the applied bounded DC-link variation
+- controller-side command behaviour remains interpretable within the present electrical current-control context
+- the retained current regulation seen in the main view is accompanied by readable controller-side adjustment within the existing Phase-4 modelling boundary
