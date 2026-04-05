@@ -41,7 +41,7 @@ For the present current-step case, the working setup is based on:
 
 A bounded `i_q_ref` step was applied on the frozen Phase-4 closed-loop baseline while `i_d_ref` and `omega_e_input` were held unchanged.
 
-The purpose of the present case is to establish an initial readable current-step behavioural view for the closed-loop baseline and to assess whether the resulting response remains bounded and interpretable under the present excitation. 
+The purpose of the present case is to establish a readable current-step behavioural view for the closed-loop baseline and to assess whether the resulting response remains bounded and interpretable under the present excitation.
 
 ### Main View
 
@@ -85,11 +85,11 @@ The present figure is therefore used to show that:
 
 ---
 
-## Load Disturbance
+## Load-Side Disturbance
 
 ### Case Setup
 
-For the present load-disturbance case, the working setup is based on:
+For the present load-side disturbance case, the working setup is based on:
 
 - `i_d_ref = 0 A`
 - `i_q_ref = 10 A`
@@ -99,14 +99,13 @@ For the present load-disturbance case, the working setup is based on:
 
 In the present case, a bounded perturbation was applied to `omega_e_input` on the frozen Phase-4 closed-loop baseline while the current-reference operating point was held unchanged.
 
-Within the present Phase-4 interpretation boundary, this case is used as a representative operating-condition disturbance and as a load-side surrogate within the existing electrical-only closed-loop context.
+Within the present Phase-4 interpretation boundary, this case is used as a representative operating-condition disturbance and as a load-side surrogate within the existing electrical-only interpretation context.
 
 The purpose of the present case is to observe whether the frozen closed-loop baseline retains readable and bounded current regulation under the applied operating-condition perturbation, and whether the associated controller-side reaction remains interpretable within the present modelling boundary.
 
-
 ### Main View
 
-![Load Disturbance — Main View](../images/behaviour/load_disturbance_main.png)
+![Load-Side Disturbance — Main View](../images/behaviour/load_disturbance_main.png)
 
 The main view records the applied `omega_e_input` perturbation together with the resulting `i_q_fb` behaviour on the frozen Phase-4 closed-loop baseline.
 
@@ -120,7 +119,7 @@ Accordingly, the present figure is used primarily to show that:
 
 ### Supporting View
 
-![Load Disturbance — Supporting View](../images/behaviour/load_disturbance_aux.png)
+![Load-Side Disturbance — Supporting View](../images/behaviour/load_disturbance_aux.png)
 
 The supporting view complements the main view by observing:
 
