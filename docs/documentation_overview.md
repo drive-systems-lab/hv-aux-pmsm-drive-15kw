@@ -43,3 +43,21 @@ Executable models are located under:
 
 - `models/switching/` (model-level documentation provided in directory README)
 - `models/discrete/` (model-level documentation provided in directory README)
+
+---
+
+## Control Integration & Behaviour Exploration (Phase 4)
+
+Control-facing interpretation, engineering-constraint framing, executable closed-loop baseline development, and representative behavioural documentation for the frozen Phase-4 baseline.
+
+Documentation artefacts include:
+
+- `control_plant_context.md`
+- `engineering_constraints.md`
+- `control_behaviour.md`
+
+Executable models are located under:
+
+- `models/control/` (control-side and top-level closed-loop baseline artefacts)
+- `models/switching/` (including the closed-loop integration variant alongside the preserved Phase-3 switching baseline context)
+- `models/discrete/` (including the closed-loop integration variant alongside the preserved Phase-3 discrete PMSM baseline context)

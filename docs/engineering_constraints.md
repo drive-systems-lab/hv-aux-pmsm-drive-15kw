@@ -79,6 +79,16 @@ At this stage, sampling is understood as part of the control-facing timing struc
 This document does not define implementation-level sampling architecture or embedded real-time execution detail.  
 Its purpose is to record that Phase-4 current-loop behaviour is interpreted under a timing assumption that is internally consistent and engineering-plausible.
 
+In the present Phase-4 structural baseline, controller-side sampling treatment is retained within the controller artefact rather than being externalised to the top-level integration layer.
+
+Accordingly, subsystem-boundary sample-time warnings may remain visible during top-level simulation where controller-side timing assumptions meet the wider executable baseline.
+
+Within the current Phase-4 interpretation boundary, such warnings are treated as known integration-level artefacts of the adopted structural partitioning, rather than as indicators that the recorded behavioural observations fall outside the present frozen closed-loop baseline.
+
+The present project phase prioritises structural clarity, module-boundary readability, and interpretable behavioural evidence over warning-free rate-adapter flattening at the integration layer.
+
+This clarification does not introduce an implementation-level sampling design rule or embedded execution claim. Its purpose is only to clarify how the present behavioural evidence should be read within the adopted modelling-timebase context.
+
 ---
 
 ## Interpretation Boundary

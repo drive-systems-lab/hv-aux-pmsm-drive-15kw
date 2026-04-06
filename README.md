@@ -7,13 +7,15 @@ The target applications are auxiliary loads such as oil pumps and coolant pumps,
 The repository is organised as an engineering portfolio project, structured to demonstrate end-to-end drive-system engineering.  
 The full engineering scope spans system specification, architecture design, power-stage reasoning, modelling strategy, control design, simulation workflow, testing and debugging methodology, and engineering documentation, developed across phased project execution.
 
-> **Phase snapshot: Phase 1 complete · Phase 2 complete · Phase 3 complete (modelling baseline established)**  
+> **Phase snapshot: Phase 1 complete · Phase 2 complete · Phase 3 complete · Phase 4 complete (closed-loop baseline and representative behavioural evidence established)**
 >
 > **Phase 1** establishes and freezes the system-level definition, functional architecture, and control-boundary design. Parameters at this stage are architectural anchors and structural placeholders, rather than performance commitments. 
 >
 > **Phase 2** establishes the system-level power-stage reasoning baseline, consolidating architectural and behavioural judgements while intentionally remaining non-implementation-ready. Numerical design, detailed modelling, and validation activities are explicitly deferred to subsequent phases.
 >
 > **Phase 3** establishes executable modelling artefacts at switching and discrete abstraction layers. Structural traceability to Phase-2 engineering judgement has been consolidated through alignment and validation mapping documentation. No optimisation or implementation commitments are introduced at this stage.  
+>  
+>  **Phase 4** establishes the control–plant interpretation baseline, executable closed-loop control baseline, and representative behavioural evidence on the frozen structural baseline. The resulting artefacts remain qualitative, scope-disciplined, and non-implementation-finalised.    
 
 All numerical parameters and models are illustrative and intended for demonstration rather than deployment.  
 The system parameters and models represent a generalized abstraction inspired by typical high-voltage auxiliary drive architectures, and do not correspond to any specific commercial product.
@@ -37,14 +39,11 @@ Performing power-stage design reasoning across inverter topology, semiconductor 
 ### • Modelling and simulation workflow
 Developing system-level, control-oriented and switching models, together with a structured multi-stage validation workflow.
 
-### • Control design
-Designing control algorithms, including FOC/SVPWM implementation logic, bandwidth selection, PI tuning, delay compensation, limiting strategies, nonlinear-region handling, and commissioning considerations.
-
-### • Testing and debugging methodology
-Conducting testing and debugging workflow, including measurement considerations, limiter and anti-windup behaviour, EMI-related effects, step-response testing, and practical debugging strategies.
+### • Control integration and behavioural observation
+Establishing a baseline FOC/SVPWM current-control path, executable closed-loop control baseline, and representative behavioural evidence within a qualitative modelling boundary.
 
 ### • Engineering documentation
-Producing clear, traceable engineering documentation aligned with industry practices, including system notes, modelling assumptions, design justifications, and debugging insights.
+Producing clear, traceable engineering documentation aligned with industry practices, including system notes, modelling assumptions, design justifications, control–plant interpretation, engineering constraints, and behavioural documentation.
 
 ---
 
@@ -133,13 +132,12 @@ The project follows a four-phase development timeline aligned with typical autom
 * Consolidate structured validation mapping between Phase-2 reasoning and Phase-3 artefacts  
 * Freeze modelling baseline without optimisation or implementation commitments
 
-### Phase 4 — Control, Debugging & Release v1.0 (Mar 2026)
+### Phase 4 — Control Integration & Behaviour Exploration (Mar 2026)
 
-* Document FOC/SVPWM logic and control structure  
-* PI tuning workflow and delay-handling strategy  
-* Limiting, nonlinear-region handling  
-* Debugging methodology and commissioning notes  
-* Final documentation and v1.0 packaging  
+* Establish the control–plant interpretation baseline  
+* Establish the executable closed-loop control baseline  
+* Document representative behavioural observations on the frozen closed-loop baseline  
+* Consolidate repository-facing documentation and readiness for v1.0 release
 
 This plan may evolve as refinements or additional demonstrations are added, while maintaining overall structural consistency.
 
@@ -147,12 +145,12 @@ This plan may evolve as refinements or additional demonstrations are added, whil
 
 # 5. Project Status
 
-Current phase: **Phase 3 — completed (modelling baseline established)**
+Current phase: **Phase 4 — completed (closed-loop baseline and representative behavioural evidence established)**
 
-Phase 3 establishes executable artefacts at defined abstraction layers and consolidates cross-phase traceability while maintaining strict scope discipline.  
-All Phase 3 outputs remain intentionally **non-optimised and non-implementation-ready**.
+Phase 4 establishes the control–plant interpretation baseline, executable closed-loop control baseline, and representative behavioural evidence on the frozen structural baseline, while maintaining strict scope discipline.
+All Phase 4 outputs remain intentionally **qualitative, non-optimised, and non-implementation-finalised**.
 
-Future updates will extend the repository in accordance with the defined development phases.
+Future updates may extend the repository through later release-facing refinement and polishing while preserving the current structural baseline.
 
 ---
 
@@ -160,6 +158,6 @@ Future updates will extend the repository in accordance with the defined develop
 
 * All models, diagrams, and algorithms are illustrative.  
 * No proprietary firmware or commercial IP is included.  
-* This repository focuses on engineering reasoning, structural clarity, and methodological demonstration, rather than deployable embedded software.  
+* This repository focuses on engineering reasoning, structural clarity, and methodological demonstration rather than deployable embedded software or hardware-facing validation.
 * See LICENSE for usage and redistribution terms.
 
