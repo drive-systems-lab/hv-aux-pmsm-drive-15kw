@@ -23,9 +23,8 @@ The following validation artefacts were explicitly declared in:
 | Phase-2 Validation Artefact |
 |----------------------------|
 | Switching-level simulation waveforms |
-| Discrete-time inverter models |
+| Discrete-time electrical-state models |
 | DC-link stress envelope awareness |
-| Experimental bring-up notes (deferred beyond Phase 3) ||
 
 ---
 
@@ -36,9 +35,8 @@ The table below establishes structural coverage between the validation artefacts
 | Phase-2 Declared Artefact | Phase-3 Executable Artefact | Coverage Status | Boundary Note |
 |----------------------------|-----------------------------|-----------------|---------------|
 | Switching-level simulation waveforms | `models/switching/inverter_switching_model.slx` | Structurally supported | R–L placeholder only; no motor dynamics |
-| Discrete-time inverter models | `models/discrete/pmsm_discrete_model.slx` | Structurally supported | dq frame only; mechanical domain excluded |
+| Discrete-time electrical-state models | `models/discrete/pmsm_discrete_model.slx` | Structurally supported | dq frame only; mechanical domain excluded |
 | DC-link stress envelope awareness | `models/switching/inverter_switching_model.slx` | Structurally observable | No quantitative ripple envelope established |
-| Experimental bring-up notes | — | Deferred beyond Phase 3 | Hardware validation intentionally outside Phase-3 scope |
 
 No optimisation, numerical convergence study, or quantitative performance validation is implied.
 

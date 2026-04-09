@@ -2,8 +2,7 @@
 
 This directory contains the switching-level inverter simulation model established in Phase 3.
 
-The model represents the inverter stage at switching resolution, including power-path topology and interface definitions.  
-Behavioural capability is progressively introduced in subsequent iterations.
+The model represents the inverter stage at switching resolution, including power-path topology, interface definitions, and the executable switching-level baseline established in Phase 3.
 
 ---
 
@@ -11,7 +10,7 @@ Behavioural capability is progressively introduced in subsequent iterations.
 
 ### Scope
 
-At this stage, the objective is architectural completeness only.
+The objective of this baseline layer is architectural completeness only.
 
 - Three-phase inverter switching topology
 - Simplified DC-link representation
@@ -43,9 +42,9 @@ Model execution is not required in this freeze stage.
 
 ### Scope
 
-At this stage, switching activity is enabled through a basic carrier-based SPWM implementation.
+This layer enables switching activity through a basic carrier-based SPWM implementation.
 
-The focus remains on execution stability and behavioural visibility.
+The focus is on execution stability and behavioural visibility.
 
 - Carrier-based SPWM
 - Complementary bottom-switch logic
@@ -68,9 +67,9 @@ The focus remains on execution stability and behavioural visibility.
 
 ### Scope
 
-At this stage, minimal excitation scenarios are introduced to validate switching-level behavioural consistency, without modifying the power-stage structure.
+This layer introduces minimal excitation scenarios to validate switching-level behavioural consistency without modifying the power-stage structure.
 
-The objective is behavioural coverage, not performance evaluation.
+The objective is behavioural coverage rather than performance evaluation.
 
 ### Implemented Scenario Set
 
@@ -100,7 +99,7 @@ Scenarios serve excitation coverage at switching resolution only.
 
 ## Day 5 — Baseline Consolidation & Freeze
 
-Following behavioural validation under Scenario A, the switching-level baseline is consolidated and frozen under the following reproducible configuration:
+The switching-level baseline is consolidated and frozen under the following reproducible configuration:
 
 - Discrete fixed-step solver (Ts = 1e-6 s)
 - Discrete powergui (SPS environment)
@@ -111,7 +110,7 @@ Following behavioural validation under Scenario A, the switching-level baseline 
 
 This configuration defines the numerical and structural reference point for subsequent Phase 3 development.
 
-Further behavioural exploration will extend from this frozen baseline without altering its architectural definition.
+Behavioural exploration extends from this frozen baseline without altering its architectural definition.
 
 ---
 

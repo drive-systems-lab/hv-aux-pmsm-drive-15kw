@@ -47,21 +47,21 @@ Its role is to provide a stable switching-side context within which the current-
 
 ---
 
-## DC-Bus Stability Assumptions
+## DC-Link Stability Assumptions
 
-The Phase-4 current-control interpretation is established under a bounded DC-bus condition.
+The Phase-4 current-control interpretation is established under a bounded DC-link condition.
 
-For the purposes of this phase, the DC bus is assumed to remain sufficiently stable for the following modelling interpretation to hold:
+For the purposes of this phase, the DC-link is assumed to remain sufficiently stable for the following modelling interpretation to hold:
 
-- DC-bus variation does not dominate the observed current-loop behaviour
+- DC-link variation does not dominate the observed current-loop behaviour
 - the modulation-side voltage command remains meaningful as a control-facing quantity
 - inverter-stage behaviour can be interpreted without introducing a broader DC-source dynamics study
 - observed current-loop behaviour can be read primarily in relation to the control path and plant-side electrical response
 
-This assumption does not imply that DC-bus variation is absent.  
+This assumption does not imply that DC-link variation is absent.  
 It defines the engineering boundary within which Phase-4 behavioural interpretation remains focused on the electrical current-control structure.
 
-Accordingly, upstream source dynamics, severe bus-instability scenarios, and bus-design optimisation are outside the present scope.
+Accordingly, upstream source dynamics, severe DC-link instability scenarios, and DC-bus design optimisation are outside the present scope.
 
 ---
 
@@ -69,7 +69,7 @@ Accordingly, upstream source dynamics, severe bus-instability scenarios, and bus
 
 The Phase-4 current-control interpretation also depends upon a consistent sampling-side assumption.
 
-At this stage, sampling is understood as part of the control-facing timing structure required to maintain consistency across:
+Sampling is understood as part of the control-facing timing structure required to maintain consistency across:
 
 - dq-axis current feedback
 - current-control decision updates
@@ -81,11 +81,11 @@ Its purpose is to record that Phase-4 current-loop behaviour is interpreted unde
 
 In the present Phase-4 structural baseline, controller-side sampling treatment is retained within the controller artefact rather than being externalised to the top-level integration layer.
 
-Accordingly, subsystem-boundary sample-time warnings may remain visible during top-level simulation where controller-side timing assumptions meet the wider executable baseline.
+Accordingly, subsystem-boundary sample-time warnings may be visible during top-level simulation where controller-side timing assumptions meet the wider executable baseline.
 
-Within the current Phase-4 interpretation boundary, such warnings are treated as known integration-level artefacts of the adopted structural partitioning, rather than as indicators that the recorded behavioural observations fall outside the present frozen closed-loop baseline.
+Within the current Phase-4 interpretation boundary, such warnings are understood as integration-level artefacts of the adopted structural partitioning and modelling-timebase arrangement.
 
-The present project phase prioritises structural clarity, module-boundary readability, and interpretable behavioural evidence over warning-free rate-adapter flattening at the integration layer.
+Together, these reflect a modelling preference for structural clarity, module-boundary readability, and interpretable behavioural evidence.
 
 This clarification does not introduce an implementation-level sampling design rule or embedded execution claim. Its purpose is only to clarify how the present behavioural evidence should be read within the adopted modelling-timebase context.
 
@@ -93,7 +93,7 @@ This clarification does not introduce an implementation-level sampling design ru
 
 ## Interpretation Boundary
 
-The engineering constraints documented here define the intended interpretation boundary for Phase 4.
+The engineering constraints documented here define the intended interpretation boundary for the Phase-4 closed-loop control baseline.
 
 Within that boundary:
 
@@ -117,4 +117,4 @@ Within the current Phase-4 structure:
 - `control_plant_context.md` defines the structural control–plant relationship
 - `engineering_constraints.md` defines the principal engineering assumptions under which that relationship is interpreted
 
-Together, these artefacts provide the control-facing interpretation baseline for later Phase-4 control-path work and behavioural exploration.
+Together, these artefacts provide the control-facing interpretation baseline and engineering-assumption context for the Phase-4 closed-loop control baseline.

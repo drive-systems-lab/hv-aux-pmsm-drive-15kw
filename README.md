@@ -2,11 +2,11 @@
 
 This repository presents a structured engineering workflow for a 15 kW high-voltage auxiliary PMSM drive designed for an 800 V EV platform.
 
-It is organised as a release-facing engineering portfolio, with the current v1.0 snapshot centred on system definition, architecture reasoning, executable modelling continuity, closed-loop baseline formation, and representative qualitative behavioural evidence.
+It is organised as a release-facing engineering portfolio, with the current v1.0 snapshot centred on system definition, architecture reasoning, executable modelling continuity, closed-loop control baseline formation, and representative qualitative behavioural evidence.
 
 The target application context is auxiliary loads such as oil pumps and coolant pumps, where reliability, thermal constraints, environmental robustness, and compact power-electronics integration are important engineering considerations.
 
-> **Phase snapshot: Phase 1 complete · Phase 2 complete · Phase 3 complete · Phase 4 complete (closed-loop baseline and representative behavioural evidence established)**
+> **Phase snapshot: Phase 1 complete · Phase 2 complete · Phase 3 complete · Phase 4 complete (closed-loop control baseline and representative behavioural evidence established)**
 >
 > **Phase 1** establishes and freezes the system-level definition, functional architecture, and control-boundary design. Parameters at this stage are architectural anchors and structural placeholders, rather than performance commitments. 
 >
@@ -14,7 +14,7 @@ The target application context is auxiliary loads such as oil pumps and coolant 
 >
 > **Phase 3** establishes executable modelling artefacts at switching and discrete abstraction layers. Structural traceability to Phase-2 engineering judgement is consolidated through alignment and validation mapping documentation. No optimisation or implementation commitments are introduced at this stage.  
 >  
-> **Phase 4** establishes the control–plant interpretation baseline, executable closed-loop control baseline, and representative behavioural evidence on the frozen structural baseline. The resulting artefacts remain qualitative, scope-disciplined, and non-implementation-finalised.    
+> **Phase 4** establishes the control–plant interpretation baseline, the executable closed-loop control baseline, and representative behavioural evidence within the adopted Phase-4 modelling boundary. The resulting artefacts remain qualitative, scope-disciplined, and non-implementation-finalised.   
 
 This repository is not intended as an implementation-ready product package, a hardware-validated controller release, or a tuning-complete deployment artefact.
 
@@ -142,7 +142,7 @@ The repository is presented through a four-phase delivered development sequence.
 
 * Establish the control–plant interpretation baseline  
 * Establish the executable closed-loop control baseline  
-* Document representative qualitative behavioural observations on the frozen closed-loop baseline  
+* Document representative qualitative behavioural observations on the frozen closed-loop control baseline  
 * Consolidate repository-facing documentation and release-facing closure for v1.0
 
 ---
@@ -155,7 +155,7 @@ The present repository state provides:
 
 - a coherent system-to-control documentation chain
 - frozen Phase-3 modelling baselines
-- Phase-4 control–plant interpretation and closed-loop baseline artefacts
+- Phase-4 control–plant interpretation and closed-loop control baseline artefacts
 - representative qualitative behavioural evidence documented within explicit modelling boundaries
 
 ---

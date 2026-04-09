@@ -45,8 +45,8 @@
 | Device Type                  | –        | TBD   | –     | SiC / IGBT under evaluation (to balance cost / loss / EMI) |
 | Rated Line Current           | I_line,n | TBD   | A RMS | Line current corresponding to the 15 kW power class at nominal DC bus |
 | Switching Frequency          | f_sw     | TBD   | kHz   | Design variable – constrained by losses, EMI and control bandwidth |
-| DC Link Capacitance          | C_dc     | TBD   | µF    | To be sized from DC-ripple and transient ride-through requirements |
-| Allowed DC Voltage Ripple    | ΔU_dc    | TBD   | %     | System-level constraint – peak-to-peak, relative to U_dc,nom |
+| DC-Link Capacitance          | C_dc     | TBD   | µF    | To be sized from DC-ripple and transient ride-through requirements |
+| Allowed DC-Link Voltage Ripple    | ΔU_dc    | TBD   | %     | System-level constraint – peak-to-peak, relative to U_dc,nom |
 | Inverter Efficiency Reference| η_inv    | TBD   | %     | System-level efficiency reference placeholder; final value TBD |
 
 ---
@@ -72,7 +72,7 @@
 |------------------------------|--------|-------|------|-------|
 | Resolver Type                | –      | TBD   | –    | Resolver feedback expected (AD2S1205-based front-end candidate) |
 | Resolver Excitation Voltage  | U_exc  | TBD   | V    | As per resolver and excitation-driver datasheet |
-| DC Bus Voltage Sensing       | –      | TBD   | –    | Resistor divider + ADC; scaling and resolution to be defined |
+| DC-Link Voltage Sensing       | –      | TBD   | –    | Resistor divider + ADC; scaling and resolution to be defined |
 | Phase Current Sensing        | –      | TBD   | –    | Phase-current measurement (shunt / Hall topology TBD) |
 | Inverter Temperature Sensing | –      | TBD   | –    | For thermal monitoring, derating and protection |
 | Communication Interface      | –      | TBD   | –    | CAN expected; final interface set to be confirmed |

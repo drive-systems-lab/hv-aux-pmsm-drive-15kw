@@ -7,7 +7,7 @@ This document establishes the control–plant interpretation baseline for Phase 
 Its purpose is to define how the closed-loop current-control path introduced in Phase 4 relates to the executable plant foundation established in Phase 3.
 
 This document does **not** introduce controller implementation, optimisation activity, or integration finalisation.  
-Its role is to provide a stable interpretive reference for subsequent Phase-4 work by defining the control–plant relationship, principal signal interfaces, and coordinate-system context required for later control-path and integration artefacts to remain structurally consistent with the frozen modelling basis inherited from Phase 3.
+Its role is to provide a stable interpretive reference by defining the control–plant relationship, principal signal interfaces, and coordinate-system context required for the Phase-4 control-path and integration artefacts to remain structurally consistent with the frozen modelling basis inherited from Phase 3.
 
 ---
 
@@ -19,7 +19,7 @@ The control-oriented structural view adopted for Phase 4 is:
 
 This expression defines the intended closed-loop interpretation boundary for Phase 4.
 
-At this stage, it should be understood as a **structural and modelling reference** rather than as a claim of executable closed-loop baseline completion.
+It should be understood as a **structural and modelling reference** rather than as a statement that the executable closed-loop control baseline is fully established.
 
 ---
 
@@ -49,8 +49,8 @@ Within the Phase-4 interpretation, the control path and plant foundation are rel
 - the **PMSM electrical plant** represents the electrical response layer inherited from the Phase-3 discrete PMSM baseline
 - the **current feedback** closes the electrical current-control loop at the interpretation level adopted for Phase 4
 
-This relationship is introduced here as a modelling baseline for later Phase-4 interpretation and execution work.  
-It does not imply final closed-loop artefact completion.
+This relationship is introduced here as a modelling baseline for Phase-4 interpretation and executable control-path assembly.  
+It does not define the full executable closed-loop control baseline.
 
 ---
 
@@ -77,7 +77,7 @@ These quantities define the intended current-reference input to the current-cont
   dq-axis quadrature-voltage reference produced by the current-control layer as the control-side voltage command along the q axis.
 
 These quantities represent the principal control-side voltage commands passed toward the modulation-side path.  
-At this stage, they are documented as interpretation-level interface quantities within the Phase-4 modelling baseline.
+They are documented as interpretation-level interface quantities within the Phase-4 modelling baseline.
 
 ### Feedback-side signals
 
@@ -94,7 +94,7 @@ Taken together, the principal signal relationship can be interpreted as:
 `(i_d_ref, i_q_ref) → current-control decision layer → (v_d_ref, v_q_ref) → modulation-side path → inverter stage → PMSM electrical plant → (i_d_fb, i_q_fb)`
 
 This expression defines the signal-interface interpretation adopted for Phase 4.  
-It should be understood as a modelling baseline only, not as a claim of final integrated closed-loop completion.
+It should be understood as a modelling baseline only, not as a definition of the full integrated closed-loop control baseline.
 
 ---
 
@@ -153,6 +153,6 @@ The governance relationship between Phase 3 and Phase 4 is defined as follows:
 - the **Phase-3 switching baseline remains frozen**
 - the **Phase-3 discrete PMSM baseline remains frozen**
 - **Phase 4 builds upon these artefacts without replacing, refreezing, or redefining them**
-- later closed-loop integration work must remain structurally consistent with the modelling basis established in earlier phases
+- the closed-loop integration artefacts must remain structurally consistent with the modelling basis established in earlier phases
 
 Accordingly, this document serves as a cross-phase interpretation reference rather than a baseline replacement document.

@@ -370,12 +370,10 @@ The following artefacts are **intentionally deferred to Phase 3–4** and will b
 
 - Switching-level simulation waveforms, used to observe dv/dt behaviour,
   current ripple trends, and qualitative switching loss tendencies
-- Discrete-time inverter models, used to study interaction between inverter
+- Discrete-time electrical-state models, used to study interaction between electrical-state
   dynamics and control assumptions
 - DC-link stress envelopes under representative operating conditions,
   used to assess the validity of energy buffering and decoupling assumptions
-- Experimental bring-up and debugging notes, used to confirm practical
-  feasibility of the assumed operating domains
 
 These artefacts are **not required for Phase 2**, and their absence does not invalidate the system-level reasoning presented in this document.  
-Instead, they provide **quantitative and experimental anchors** for validating the Phase-2 design judgements in subsequent phases.
+Instead, they provide **quantitative anchors** for validating the Phase-2 design judgements in subsequent phases.
