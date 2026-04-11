@@ -91,15 +91,9 @@ The repository is organised as follows in the current v1.0 release:
 │                        # architecture, power-stage reasoning, control–plant interpretation,
 │                        # engineering constraints, and behavioural documentation
 │
-├── design/              # Currently reserved in v1.0
-│                        # No dedicated design-note layer is populated in the present release
-│
 ├── models/              # System-level reference artefact, together with executable
 │                        # modelling artefacts across switching-level, discrete-time,
 │                        # controller-side, modulation-side, and closed-loop integration layers
-│
-├── src/                 # Currently reserved in v1.0
-│                        # The present release does not include a source-code or pseudocode layer
 │
 ├── images/              # Architecture figures, block diagrams, conceptual diagrams,
 │                        # and curated behavioural plots
