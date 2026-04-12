@@ -1,8 +1,8 @@
 # Documentation Overview
 
-This document provides a structured navigation overview of the documentation artefacts within the repository.
+This document provides a structured navigation overview of the repository documentation and its associated model locations.
 
-It organises documentation by engineering role and phase alignment.  
+It organises the principal documentation artefacts by engineering role and phase alignment, with linked model locations noted where relevant.  
 No additional technical claims or validation statements are introduced here.
 
 ---
@@ -14,8 +14,8 @@ High-level system architecture and requirement-related documentation.
 - `system_requirements.md`
 - `system_architecture.md`
 - `control_architecture.md`
-- `architecture_tradeoffs.md`
 - `parameter_table.md`
+- `architecture_tradeoffs.md`
 
 ---
 
@@ -39,7 +39,7 @@ Switching simulation, discrete modelling, abstraction-layer alignment, and trace
 - `switching_discrete_alignment.md`
 - `validation_mapping.md`
 
-Executable models are located under:
+Associated executable models are located under:
 
 - `models/switching/` (model-level documentation provided in directory README)
 - `models/discrete/` (model-level documentation provided in directory README)
@@ -52,11 +52,11 @@ Control-facing interpretation, engineering-constraint framing, executable closed
 
 Documentation artefacts include:
 
-- `control_plant_context.md`
+- `control_plant_context.md` 
 - `engineering_constraints.md`
 - `control_behaviour.md`
 
-Executable models are located under:
+Associated executable models are located under:
 
 - `models/control/` (control-side and top-level closed-loop baseline artefacts)
 - `models/switching/` (including the closed-loop integration variant alongside the preserved Phase-3 switching baseline context)

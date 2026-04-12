@@ -135,7 +135,7 @@ Tested with MATLAB R2023b (Simulink).
   Mainline switching-level model.
 
 - `inverter_switching_variant_*.slx`  
-  Variant models created for specific non-ideal or exploratory studies.  
+  Variant models created for specific exploratory, non-ideal, or integration-facing studies. 
   These do not replace the mainline model.
 
 ---

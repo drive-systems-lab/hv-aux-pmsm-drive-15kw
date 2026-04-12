@@ -2,7 +2,7 @@
 
 This repository presents a structured engineering workflow for a 15 kW high-voltage auxiliary PMSM drive designed for an 800 V EV platform.
 
-It is organised as a release-facing engineering portfolio, with the current v1.0 snapshot centred on system definition, architecture reasoning, executable modelling continuity, closed-loop control baseline formation, and representative qualitative behavioural evidence.
+It is organised as a release-facing engineering portfolio, with the current v1.0 snapshot centred on system definition, architecture reasoning, executable modelling continuity, closed-loop control baseline formation, and representative qualitative behavioural evidence within explicitly stated modelling boundaries.
 
 The target application context is auxiliary loads such as oil pumps and coolant pumps, where reliability, thermal constraints, environmental robustness, and compact power-electronics integration are important engineering considerations.
 
@@ -14,7 +14,7 @@ The target application context is auxiliary loads such as oil pumps and coolant 
 >
 > **Phase 3** establishes executable modelling artefacts at switching and discrete abstraction layers. Structural traceability to Phase-2 engineering judgement is consolidated through alignment and validation mapping documentation. No optimisation or implementation commitments are introduced at this stage.  
 >  
-> **Phase 4** establishes the control–plant interpretation baseline, the executable closed-loop control baseline, and representative behavioural evidence within the adopted Phase-4 modelling boundary. The resulting artefacts remain qualitative, scope-disciplined, and non-implementation-finalised.   
+> **Phase 4** establishes the control–plant interpretation baseline, the executable closed-loop control baseline, and representative qualitative behavioural evidence within the adopted Phase-4 modelling boundary. The resulting artefacts remain scope-disciplined and non-implementation-finalised.   
 
 This repository is not intended as an implementation-ready product package, a hardware-validated controller release, or a tuning-complete deployment artefact.
 
@@ -101,7 +101,7 @@ The repository is organised as follows in the current v1.0 release:
 └── README.md            # Project overview and release-facing navigation entry point
 ```
 
-For a guided view of the repository documentation and associated model locations,  
+For a guided view of the released documentation structure and associated model locations,  
 see [`docs/documentation_overview.md`](docs/documentation_overview.md).
 
 ---
@@ -137,7 +137,7 @@ The repository is presented through a four-phase delivered development sequence.
 * Establish the control–plant interpretation baseline  
 * Establish the executable closed-loop control baseline  
 * Document representative qualitative behavioural observations on the frozen closed-loop control baseline  
-* Consolidate repository-facing documentation and release-facing closure for v1.0
+* Consolidate the released v1.0 documentation baseline and repository-facing alignment
 
 ---
 

@@ -2,11 +2,11 @@
 
 ## Scope and Boundary
 
-This document records behaviour-oriented observations on the frozen Phase-4 closed-loop control baseline.
+This document records qualitative behaviour-oriented observations on the frozen Phase-4 closed-loop control baseline.
 
 The present material is intended to support interpretable closed-loop behavioural evidence on the frozen Phase-4 closed-loop control baseline, with emphasis on engineering readability, bounded response, and cross-signal interpretability.
 
-The observations recorded here should not be interpreted as tuned-performance validation, implementation-frequency commitment, hardware-facing validation, or robustness-margin conclusion.
+The observations recorded here should not be interpreted as tuned-performance validation, implementation-facing claims, hardware-facing validation, or robustness-margin conclusions.
 
 ---
 

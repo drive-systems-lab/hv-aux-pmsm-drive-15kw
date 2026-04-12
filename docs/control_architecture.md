@@ -38,7 +38,7 @@ These subsystems operate within a unified controller boundary and interact with 
 The **Current Control** block represents the inner control function responsible for regulating machine currents in the rotating dq reference frame.
 
 ### Functional role:
-- Accepts current references `i_dq_ref` provided by an **outer loop or system supervisor** (defined in Phase 2+)
+- Accepts current references `i_dq_ref` provided by an **outer loop or system supervisor**, treated here as an external upstream function within the Phase-1 architecture view.  
 - Processes measured phase currents `i_abc`, transformed internally into the dq frame
 - Utilises electrical position feedback `theta_e_meas` for reference frame alignment
 - Generates voltage references `v_dq_ref` for downstream modulation
@@ -60,7 +60,7 @@ The **Modulation** block represents the functional interface between voltage ref
 In Phase 1, this block is explicitly defined as a **placeholder**, representing the modulation function at architectural level rather than a committed implementation.  
 At model level, this placeholder is instantiated as an *SVPWM skeleton* to provide a concrete but non-final executable structure.  
 
-The exact modulation strategy, timing behaviour, and implementation details are deferred to later phases.
+The exact modulation strategy, timing behaviour, and implementation details remain outside the scope of this Phase-1 architectural definition.
 
 ---
 
@@ -69,7 +69,7 @@ The exact modulation strategy, timing behaviour, and implementation details are 
 The control architecture is characterised by a **clear and unidirectional signal flow**:
 
 - **Inputs to the controller**:
-  - `i_dq_ref` from outer-loop or supervisory control (Phase 2+)
+  - `i_dq_ref` from outer-loop or supervisory control, treated here as an external upstream interface  
   - `i_abc` from current sensing
   - `theta_e_meas` from position sensing
   - `vdc` from DC-link measurement
@@ -98,9 +98,6 @@ This ensures that control architecture remains **consistent with the system-leve
 
 ## 8. Phase 1 Positioning
 
-This control architecture serves as a **baseline definition** for subsequent phases:
+Within the released repository baseline, Phase 1 establishes the control-architecture snapshot at the level of **structure, interfaces, and functional partitioning**.
 
-- Phase 2 will refine control algorithms and higher-level control structures, as applicable
-- Phase 3+ will address implementation, tuning, validation, and optimisation
-
-Phase 1 intentionally focuses on **structure, interfaces, and boundaries**, rather than detailed control behaviour.
+It intentionally focuses on **structure, interfaces, and boundaries**, rather than detailed control behaviour.

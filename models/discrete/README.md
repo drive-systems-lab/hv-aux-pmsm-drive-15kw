@@ -59,7 +59,7 @@ Tested with MATLAB R2023b (Simulink).
   Mainline discrete electrical model.
 
 - `pmsm_discrete_variant_*.slx`  
-  Variant models created for exploratory or non-ideal studies.  
+  Variant models created for specific exploratory, non-ideal, or integration-facing studies.
   These do not replace the mainline model.
 
 ---

@@ -23,7 +23,7 @@ Draft system-level requirements for a 15 kW high-voltage auxiliary PMSM drive op
     *   Automotive HV DC bus environment.
     *   Under-hood or near-battery-compartment installation (exact conditions TBD).
 
-Further details (duty cycles, thermal environment, mission profiles) will be added as the overall system architecture stabilises.
+Further details (duty cycles, thermal environment, mission profiles) remain outside the present requirement-level draft baseline.
 
 ---
 
@@ -49,7 +49,7 @@ Further details (duty cycles, thermal environment, mission profiles) will be add
 *   **Efficiency targets:**\
     Overall and partial-load efficiency requirements TBD.
 
-Exact numerical values will be established following initial power-stage sizing and implementation-level architecture trade-off activities.
+Exact numerical values are intentionally not fixed within the present requirement-level draft baseline.
 
 ---
 
@@ -66,7 +66,7 @@ Exact numerical values will be established following initial power-stage sizing 
 *   **Grounding / shielding:**
     *   Protective earth (PE) and shield-termination strategy TBD.
 
-More detailed interface diagrams will be added during implementation-level architecture definition in subsequent phases.
+More detailed interface diagrams are not developed within the present Phase-1 requirement draft.
 
 ---
 
@@ -103,8 +103,7 @@ More detailed interface diagrams will be added during implementation-level archi
 *   **Communication interface:**\
     Interface type TBD (CAN / UART / SPI / other options under consideration).
 
-A detailed control and communication specification will be developed in a dedicated implementation-level architecture document
-in subsequent phases.
+A detailed control and communication specification is outside the scope of the present requirement-level artefact.
 
 ---
 
@@ -119,13 +118,13 @@ in subsequent phases.
 *   **Functional safety / compliance:**\
     Applicable standards and interactions with system-level safety functions TBD.
 
-This section will be refined as target application details and customer requirements become clearer.
+This section remains intentionally open-ended within the present requirement draft, reflecting the architectural placeholder role of the Phase-1 baseline.
 
 ---
 
-## 7. Open Points and To-Be-Defined Items
+## 7. Open Points
 
-The following elements are intentionally left open at the end of Phase 1 and will be refined in subsequent project phases as implementation-level design, modelling and validation activities progress:
+The following elements are intentionally left open at the end of Phase 1:
 
 *   Final torque–speed envelope and operating points.
 *   Exact DC bus operating window and associated derating rules.
@@ -134,5 +133,3 @@ The following elements are intentionally left open at the end of Phase 1 and wil
 *   Final communication interface and message definitions.
 *   Detailed protection thresholds and coordination with system-level safety functions.
 *   Any application- or platform-specific mechanical, electrical or packaging constraints.
-
-This list will be progressively refined and reduced as the project advances towards detailed implementation and system validation.

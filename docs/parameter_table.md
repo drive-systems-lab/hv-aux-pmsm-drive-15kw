@@ -79,12 +79,12 @@
 
 ---
 
-## 6. Open Points (Phase 1 Carry-Over)
+## 6. Open Points
 
-- PMSM datasheet and exact ratings (torque, current, speed, voltage class) pending supplier confirmation.  
-- Detailed PMSM model parameters (Rs, Ld/Lq, Ψf, losses) pending for Phase 2 modelling.  
-- Semiconductor device selection (SiC vs IGBT), including voltage class & loss/EMI trade-offs, still open.  
-- Thermal limits and cooling architecture (oil / water) to be confirmed with mechanical/vehicle team.  
-- Control bandwidths and sampling periods to be set after small-signal modelling and plant identification.  
-- Protection thresholds and derating strategy to be defined after thermal & electrical modelling.  
-- Final DC bus operating range, sag tolerance and overload profile to be agreed with system requirements.
+- PMSM datasheet anchoring and exact ratings (torque, current, speed, voltage class) remain open.  
+- Detailed PMSM model parameters (Rs, Ld/Lq, Ψf, losses) are not fixed.  
+- Semiconductor device selection (SiC vs IGBT), including voltage class and loss/EMI trade-off positioning, remains open.  
+- Thermal limits and cooling architecture (oil / water) remain open.  
+- Control bandwidths and sampling periods remain open.  
+- Protection thresholds and derating strategy remain open.  
+- Final DC bus operating range, sag tolerance, and overload profile are not fixed.

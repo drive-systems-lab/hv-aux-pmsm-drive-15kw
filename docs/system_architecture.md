@@ -1,8 +1,7 @@
 # System Architecture – 15 kW HV Auxiliary PMSM Drive (800 V Platform)
 
 > **Status (Phase 1 – Baseline):**  
-> This document defines the system-level architecture for the 15 kW HV auxiliary PMSM drive,
-> including system boundaries, major functional blocks, and high-level power and control interfaces.  
+> This document defines the system-level architecture for the 15 kW HV auxiliary PMSM drive, including system boundaries, major functional blocks, and high-level power and control interfaces.  
 > Detailed electrical design, control algorithms, and parameterisation are intentionally deferred to subsequent phases.
 
 ---
@@ -80,7 +79,7 @@ In this project, SVPWM is adopted as the reference modulation approach and is do
 - **Feedback signals** from sensors are routed exclusively to the controller,
   closing the control loop at a functional level.
 
-Specific control strategies, tuning parameters, and protection logic are intentionally excluded at this stage and will be addressed in later phases.
+Specific control strategies, tuning parameters, and protection logic are intentionally excluded from this architecture-level artefact.
 
 ---
 
@@ -108,16 +107,12 @@ Alignment across these artefacts is prioritised over architectural completeness 
 
 ---
 
-## 7. Open Points and Future Refinement
+## 7. Open Points
 
-The following aspects are intentionally deferred to later project phases:
+The following aspects are intentionally left outside the scope of the present architecture-level artefact:
 
 - Detailed electrical topology and component selection.
 - Control algorithm implementation and parameter tuning.
 - Protection strategies and fault-handling behaviour.
 - Thermal, mechanical, and packaging considerations.
-
-This list is indicative rather than exhaustive, and reflects major areas intentionally deferred to subsequent phases as the system design matures.
-
-These topics will be progressively addressed as the project evolves from system-level architecture towards detailed design and implementation.
 
