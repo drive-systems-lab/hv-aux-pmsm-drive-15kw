@@ -68,4 +68,4 @@ Tested with MATLAB R2023b (Simulink).
 
 For structured cross-phase traceability between Phase-2 engineering judgement and Phase-3 modelling artefacts, see:
 
-`docs/validation_mapping.md`.
+[`docs/validation_mapping.md`](../../docs/validation_mapping.md).

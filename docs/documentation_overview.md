@@ -11,11 +11,11 @@ No additional technical claims or validation statements are introduced here.
 
 High-level system architecture and requirement-related documentation.
 
-- `system_requirements.md`
-- `system_architecture.md`
-- `control_architecture.md`
-- `parameter_table.md`
-- `architecture_tradeoffs.md`
+- [`system_requirements.md`](system_requirements.md)
+- [`system_architecture.md`](system_architecture.md)
+- [`control_architecture.md`](control_architecture.md)
+- [`parameter_table.md`](parameter_table.md)
+- [`architecture_tradeoffs.md`](architecture_tradeoffs.md)
 
 ---
 
@@ -23,12 +23,12 @@ High-level system architecture and requirement-related documentation.
 
 Inverter power-stage design reasoning and trade-off documentation.
 
-- `phase2_scope.md`
-- `power_stage_baseline.md`
-- `power_stage_design_judgement.md`
-- `power_stage_design.md`
-- `protection_and_state_machine.md`
-- `power_stage_tradeoff_matrix.md`
+- [`phase2_scope.md`](phase2_scope.md)
+- [`power_stage_baseline.md`](power_stage_baseline.md)
+- [`power_stage_design_judgement.md`](power_stage_design_judgement.md)
+- [`power_stage_design.md`](power_stage_design.md)
+- [`protection_and_state_machine.md`](protection_and_state_machine.md)
+- [`power_stage_tradeoff_matrix.md`](power_stage_tradeoff_matrix.md)
 
 ---
 
@@ -36,13 +36,13 @@ Inverter power-stage design reasoning and trade-off documentation.
 
 Switching simulation, discrete modelling, abstraction-layer alignment, and traceability documentation.
 
-- `switching_discrete_alignment.md`
-- `validation_mapping.md`
+- [`switching_discrete_alignment.md`](switching_discrete_alignment.md)
+- [`validation_mapping.md`](validation_mapping.md)
 
 Associated executable models are located under:
 
-- `models/switching/` (model-level documentation provided in directory README)
-- `models/discrete/` (model-level documentation provided in directory README)
+- [`models/switching/`](../models/switching/) (model-level documentation provided in directory README)
+- [`models/discrete/`](../models/discrete/) (model-level documentation provided in directory README)
 
 ---
 
@@ -52,12 +52,12 @@ Control-facing interpretation, engineering-constraint framing, executable closed
 
 Documentation artefacts include:
 
-- `control_plant_context.md` 
-- `engineering_constraints.md`
-- `control_behaviour.md`
+- [`control_plant_context.md`](control_plant_context.md)
+- [`engineering_constraints.md`](engineering_constraints.md)
+- [`control_behaviour.md`](control_behaviour.md)
 
 Associated executable models are located under:
 
-- `models/control/` (control-side and top-level closed-loop baseline artefacts)
-- `models/switching/` (including the closed-loop integration variant alongside the preserved Phase-3 switching baseline context)
-- `models/discrete/` (including the closed-loop integration variant alongside the preserved Phase-3 discrete PMSM baseline context)
+- [`models/control/`](../models/control/) (control-side and top-level closed-loop baseline artefacts)
+- [`models/switching/`](../models/switching/) (including the closed-loop integration variant alongside the preserved Phase-3 switching baseline context)
+- [`models/discrete/`](../models/discrete/) (including the closed-loop integration variant alongside the preserved Phase-3 discrete PMSM baseline context)
